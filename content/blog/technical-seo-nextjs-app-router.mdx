@@ -1,0 +1,56 @@
+---
+title: "Technical SEO on the Next.js App Router: A Working Checklist"
+description: "Rendering strategy, structured data, crawl budgets and Core Web Vitals — the technical SEO playbook we apply to every Next.js build we ship."
+date: "2026-05-18"
+author: "VOX Digital Agency"
+category: "Technical SEO"
+tags: ["Next.js", "Technical SEO", "Core Web Vitals", "Schema.org"]
+cover: "/images/stock/94833.jpg"
+---
+
+Technical SEO is engineering. If the rendering pipeline, crawl architecture and data markup are wrong, no amount of content marketing will save you. Here's the checklist we run on every Next.js App Router build.
+
+## Choose the right rendering mode
+
+The App Router gives you four levers: static generation, ISR, SSR and client rendering. Google can render client-side JavaScript, but it's slower, less reliable and wasteful.
+
+- Use static generation (`generateStaticParams`) for anything that doesn't change often.
+- Use ISR for content that updates on a schedule — blog posts, product pages.
+- Reserve SSR for pages where freshness beats caching.
+
+## Structured data that actually renders
+
+JSON-LD placed inside the page body is what Google expects. In the App Router, you can emit it cleanly:
+
+```tsx
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    // meta tags live here
+  };
+}
+```
+
+For JSON-LD, render a script tag directly in the page. Validate everything with the Rich Results test before launch.
+
+## A crawl budget is a budget
+
+Every page that renders slow or 404s spends your crawl budget. That means:
+
+- Sitemaps generated from source of truth, not hand-maintained.
+- Canonicals on every page.
+- Redirect maps for every migration.
+- Noindex for filters, tag pages and anything thin.
+
+## Core Web Vitals as a contract
+
+Performance is a feature. We enforce a Lighthouse budget in CI — if a PR drops a page below 95, it doesn't merge. That discipline is worth more than any one optimization.
+
+The App Router makes this achievable by default: server components mean far less JavaScript ships to the client, streaming means the first paint lands early, and the Image component handles responsive sources for you.
+
+## Measure what matters
+
+Set up Search Console, a GA4 property with consent mode, and CrUX monitoring. Look at the field data, not just the lab data. A 99 Lighthouse score that nobody experiences is fiction.
+
+Technical SEO compounds. Get the foundation right once, and every piece of content you publish from then on starts from a stronger position.

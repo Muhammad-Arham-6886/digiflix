@@ -1,0 +1,45 @@
+---
+title: "The Core Web Vitals Playbook: From 60 to 95+"
+description: "A repeatable, engineering-first playbook for taking scores from poor to excellent — without gutting the experience to get there."
+date: "2026-03-12"
+author: "VOX Digital Agency"
+category: "Performance"
+tags: ["Core Web Vitals", "Performance", "Lighthouse", "Next.js"]
+cover: "/images/programmer-close-up.jpg"
+---
+
+Getting a page to 95+ Lighthouse is not about a dozen random tricks. It's about three levers: how much JavaScript you ship, how fast the first paint lands, and how well you handle your largest element.
+
+## 1. Stop shipping what users don't need
+
+The single biggest performance win is shipping less. Server components in the App Router render most of the page on the server, so the client only gets interactive islands.
+
+Rules we enforce:
+
+- No client component that doesn't need to be one.
+- Split code with dynamic imports, not vibes.
+- No analytics script that's render-blocking.
+
+## 2. Make the first paint instant
+
+Streaming is the cheat code. With React Suspense and `loading.tsx` boundaries, the shell paints immediately and the slow parts arrive when ready. Users see something in under a second.
+
+Preload the critical path, defer everything else, and let the router stream the rest.
+
+## 3. Master your largest contentful paint
+
+Your LCP element is almost always a hero image or a heading. Give it the attention it deserves:
+
+- Use `next/image` with explicit sizes — no layout shift, no giant downloads.
+- Set `fetchPriority="high"` on the hero.
+- Serve AVIF/WebP, capped dimensions.
+
+## 4. Kill the layout shift
+
+Reserve space for images and embeds with `aspect-ratio`. Set font fallbacks that match the webfont metrics so text doesn't jump when fonts load. Layout shift is a tax on every interaction you'll ever run.
+
+## 5. Make the budget part of CI
+
+A score is only a score until it regresses. We put the Lighthouse budget in CI: any PR that drops a page below target fails the build. Performance stops being a launch-day prayer and becomes a property of the codebase.
+
+Go from 60 to 95 the same way every time: less JavaScript, earlier paint, disciplined assets, zero shift, enforced budgets.

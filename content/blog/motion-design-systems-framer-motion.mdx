@@ -1,0 +1,39 @@
+---
+title: "Motion Design Systems: Engineering Feeling Into Product UI"
+description: "Easing, springs, tokens and reduced-motion — how we build motion languages that make interfaces feel crafted instead of decorated."
+date: "2026-01-22"
+author: "VOX Digital Agency"
+category: "Design"
+tags: ["Framer Motion", "Design Systems", "Motion Design", "UX"]
+cover: "/images/social-people.jpg"
+---
+
+Bad motion is decoration. Good motion is communication — it explains what changed, what to look at and what just happened. The difference is a system, not taste.
+
+## Motion is part of the design token set
+
+The same way you define colors and spacing, define motion: durations, easings, and spring physics as named tokens. When a developer reaches for "enter" or "fade" instead of inventing a new curve, interfaces stay consistent by construction.
+
+```
+enter: spring, stiffness 260, damping 24
+emphasis: spring, stiffness 380, damping 18
+muted: ease [0.4, 0, 0.2, 1], 240ms
+```
+
+## Springs beat tweens for interface elements
+
+Physical springs feel natural because they're physical — they settle with momentum instead of stopping dead. Framer Motion makes springs first-class. Reserve timed tweens for large-scale, choreographed sequences.
+
+## Respect reduced motion like a P0 bug
+
+Every animation ships with a fallback for `prefers-reduced-motion`. Not as a feature to add later — as part of the token. If you can't express your UI without motion, your UI has a deeper problem.
+
+## Motion should answer "what just happened?"
+
+Animations are spatial: something entered, exited, reordered or changed state. Animate the layer that changed, keep the rest calm, and always move the attention to the outcome. Layout animations with `layoutId` are the single highest-leverage trick in modern UI motion — shared elements fly between states instead of re-rendering abruptly.
+
+## Keep the budget
+
+Motion is a performance line item, not an extra. Springs and transforms run on the compositor; animating `height` and `top` does not. We measure before and after and keep the animation budget inside the Lighthouse target like everything else.
+
+When motion is a system — tokens, springs, reduced-motion defaults and a performance budget — the result feels less like decoration and more like engineering. Which is exactly what it is.

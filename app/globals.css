@@ -1,0 +1,261 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+ * VOX Digital Agency — Design System (Tailwind CSS v4 tokens)
+ * Primary #8069BF · Secondary #7C7296 · Accent #C9A74D · Neutral #79767D
+ * Base background #0A0A0C · Fonts: Space Grotesk (display) + Inter (body)
+ * ------------------------------------------------------------------------- */
+
+@theme {
+  /* ---------- Typography ---------- */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: var(--font-space-grotesk), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* ---------- Primary — purple ramp ---------- */
+  --color-primary-50: #f5f2fb;
+  --color-primary-100: #e9e3fa;
+  --color-primary-200: #d4c8f5;
+  --color-primary-300: #b5a3ec;
+  --color-primary-400: #9a81e1;
+  --color-primary-500: #8069bf;
+  --color-primary-600: #6b50ac;
+  --color-primary-700: #57408f;
+  --color-primary-800: #463471;
+  --color-primary-900: #312450;
+  --color-primary-950: #1c142f;
+  --color-primary: var(--color-primary-500);
+
+  /* ---------- Secondary — muted mauve-grey ramp ---------- */
+  --color-secondary-50: #f5f4f8;
+  --color-secondary-100: #e9e8ef;
+  --color-secondary-200: #d4d2df;
+  --color-secondary-300: #b8b5c9;
+  --color-secondary-400: #9995ad;
+  --color-secondary-500: #7c7296;
+  --color-secondary-600: #665d7f;
+  --color-secondary-700: #514a66;
+  --color-secondary-800: #3e3950;
+  --color-secondary-900: #2a2736;
+  --color-secondary-950: #16151d;
+  --color-secondary: var(--color-secondary-500);
+
+  /* ---------- Accent — gold ramp ---------- */
+  --color-accent-50: #fbf8ef;
+  --color-accent-100: #f6efda;
+  --color-accent-200: #ecdcb0;
+  --color-accent-300: #e1c987;
+  --color-accent-400: #d7b867;
+  --color-accent-500: #c9a74d;
+  --color-accent-600: #b28c3a;
+  --color-accent-700: #916e2e;
+  --color-accent-800: #735428;
+  --color-accent-900: #4e3a1e;
+  --color-accent-950: #2a1f0e;
+  --color-accent: var(--color-accent-500);
+
+  /* ---------- Neutral — grey ramp ---------- */
+  --color-neutral-50: #f6f6f7;
+  --color-neutral-100: #ecebed;
+  --color-neutral-200: #d9d8dc;
+  --color-neutral-300: #c0bec4;
+  --color-neutral-400: #a6a3ab;
+  --color-neutral-500: #8d8a92;
+  --color-neutral-600: #79767d;
+  --color-neutral-700: #626067;
+  --color-neutral-800: #48474c;
+  --color-neutral-900: #2e2d31;
+  --color-neutral-950: #161518;
+  --color-neutral: var(--color-neutral-600);
+
+  /* ---------- Surfaces (dark-mode-first) ---------- */
+  --color-background: #0a0a0c;
+  --color-surface: #121216;
+  --color-surface-2: #18181d;
+  --color-surface-3: #1f1f25;
+  --color-ink: #f5f4f8;
+  --color-ink-muted: #a09cab;
+  --color-ink-faint: #6f6b78;
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-line-strong: rgba(255, 255, 255, 0.14);
+
+  /* ---------- Shadows / glows ---------- */
+  --shadow-card: 0 24px 60px -24px rgba(0, 0, 0, 0.75);
+  --shadow-card-hover: 0 32px 80px -24px rgba(0, 0, 0, 0.9);
+  --shadow-glow-primary: 0 0 60px -12px rgba(128, 105, 191, 0.45);
+  --shadow-glow-accent: 0 0 60px -12px rgba(201, 167, 77, 0.4);
+  --shadow-glow-soft: 0 0 40px -16px rgba(128, 105, 191, 0.35);
+  --shadow-inset-ring: inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+
+  /* ---------- Radii ---------- */
+  --radius-xl2: 1.5rem;
+  --radius-xl3: 2rem;
+
+  /* ---------- Animations ---------- */
+  --animate-marquee: marquee 42s linear infinite;
+  --animate-marquee-slow: marquee 70s linear infinite;
+  --animate-float: float 8s ease-in-out infinite;
+  --animate-float-delayed: float 10s ease-in-out 1.5s infinite;
+  --animate-glow-pulse: glow-pulse 6s ease-in-out infinite;
+  --animate-spin-slow: spin 14s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-14px);
+    }
+  }
+  @keyframes glow-pulse {
+    0%,
+    100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.9;
+      transform: scale(1.06);
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * Base
+ * ------------------------------------------------------------------------- */
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-primary-500) 45%, transparent);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary-400);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-neutral-800);
+    border-radius: 8px;
+    border: 2px solid var(--color-background);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-700);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * Custom utilities
+ * ------------------------------------------------------------------------- */
+@utility text-gradient {
+  background: linear-gradient(100deg, var(--color-primary-300) 0%, var(--color-primary-500) 45%, var(--color-accent-400) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility text-gradient-gold {
+  background: linear-gradient(100deg, var(--color-accent-200), var(--color-accent-500));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility glass {
+  background: color-mix(in srgb, var(--color-surface-2) 72%, transparent);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--color-line);
+}
+
+@utility glass-strong {
+  background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--color-line-strong);
+}
+
+@utility grid-bg {
+  background-image:
+    linear-gradient(rgba(128, 105, 191, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(128, 105, 191, 0.07) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+@utility card-surface {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)) padding-box,
+    var(--color-surface);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-inset-ring);
+}
+
+@utility glow-primary {
+  box-shadow: var(--shadow-glow-primary);
+}
+
+@utility glow-accent {
+  box-shadow: var(--shadow-glow-accent);
+}
+
+@utility noise {
+  position: relative;
+}
+
+/* Marquee edge fade helper */
+@utility mask-fade-x {
+  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+}
