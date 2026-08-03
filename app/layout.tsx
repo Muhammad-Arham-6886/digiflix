@@ -47,14 +47,14 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: `${siteConfig.name} — IT Solutions & Digital Engineering`,
     description: siteConfig.description,
-    images: [{ url: `${siteUrl}/og`, width: 1200, height: 630, alt: siteConfig.name }],
+    images: [{ url: `${siteUrl}/images/og.png`, width: 1200, height: 630, alt: siteConfig.name }],
   },
   twitter: {
     card: "summary_large_image",
     site: siteConfig.twitterHandle,
     title: `${siteConfig.name} — IT Solutions & Digital Engineering`,
     description: siteConfig.description,
-    images: [`${siteUrl}/og`],
+    images: [`${siteUrl}/images/og.png`],
   },
   icons: {
     icon: "/images/logo/mark.png",
