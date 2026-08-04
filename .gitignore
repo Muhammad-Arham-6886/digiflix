@@ -35,3 +35,7 @@ next-env.d.ts
 
 # leftover deployment archives (uploaded via cPanel, not part of the repo)
 upload.zip
+
+# GitHub Actions deploy staging (built payload only, never commit to main)
+/deploy_branch
+/payload
