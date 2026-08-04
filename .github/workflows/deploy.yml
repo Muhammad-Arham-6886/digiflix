@@ -38,6 +38,18 @@ jobs:
           cp -r public deploy/public
           tar -C deploy -czf payload.tar.gz .
 
+      - name: Test SSH connection
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: voxdigitalagency.com
+          port: "22"
+          username: voxdigit
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            echo "SSH login OK as: $(whoami)"
+            echo "HOME=$HOME"
+            ls -la "$HOME"
+
       - name: Copy payload to server
         uses: appleboy/scp-action@v0.1.7
         with:
