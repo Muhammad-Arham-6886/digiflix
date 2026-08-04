@@ -38,6 +38,30 @@ jobs:
           cp -r public deploy/public
           tar -C deploy -czf payload.tar.gz .
 
+      - name: Validate deploy secrets
+        env:
+          HOST: ${{ secrets.SSH_HOST }}
+          PORT: ${{ secrets.SSH_PORT }}
+          USER: ${{ secrets.SSH_USERNAME }}
+          KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ROOT: ${{ secrets.APP_ROOT }}
+        run: |
+          echo "SSH_HOST=$HOST"
+          echo "SSH_PORT=${PORT:-<unset>}"
+          echo "SSH_USERNAME=${USER:-<unset>}"
+          echo "APP_ROOT=${ROOT:-<unset>}"
+          if [ -z "$KEY" ]; then
+            echo "::error::SSH_PRIVATE_KEY is EMPTY. Add your PRIVATE key to this secret."
+          elif echo "$KEY" | grep -q "BEGIN.*PRIVATE KEY"; then
+            echo "SSH_PRIVATE_KEY looks like a private key (good)."
+          else
+            echo "::error::SSH_PRIVATE_KEY does NOT look like a private key. You likely pasted the PUBLIC key (ssh-rsa...) instead of the PRIVATE key (-----BEGIN OPENSSH PRIVATE KEY-----)."
+          fi
+          [ -n "$HOST" ] || echo "::error::SSH_HOST secret is empty"
+          [ -n "$PORT" ] || echo "::error::SSH_PORT secret is empty"
+          [ -n "$USER" ] || echo "::error::SSH_USERNAME secret is empty"
+          [ -n "$ROOT" ] || echo "::error::APP_ROOT secret is empty"
+
       - name: Copy payload to server
         uses: appleboy/scp-action@v0.1.7
         with:
