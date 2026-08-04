@@ -39,16 +39,25 @@ jobs:
           tar -C deploy -czf payload.tar.gz .
 
       - name: Test SSH connection
-        uses: appleboy/ssh-action@v1.2.0
-        with:
-          host: voxdigitalagency.com
-          port: "22"
-          username: voxdigit
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            echo "SSH login OK as: $(whoami)"
-            echo "HOME=$HOME"
-            ls -la "$HOME"
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          set +e
+          ssh -i ~/.ssh/deploy_key \
+            -o BatchMode=yes \
+            -o StrictHostKeyChecking=no \
+            -o UserKnownHostsFile=/dev/null \
+            -o ConnectTimeout=15 \
+            -p 22 voxdigit@voxdigitalagency.com \
+            "echo CONNECTED_OK; whoami" > /tmp/ssh_out.txt 2>&1
+          CODE=$?
+          echo "ssh exit code: $CODE"
+          while IFS= read -r line; do
+            [ -n "$line" ] && echo "::error::$line"
+          done < /tmp/ssh_out.txt
+          cat /tmp/ssh_out.txt
+          exit $CODE
 
       - name: Copy payload to server
         uses: appleboy/scp-action@v0.1.7
