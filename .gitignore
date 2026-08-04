@@ -32,3 +32,6 @@ next-env.d.ts
 
 # source image assets (optimized copies live in /public/images)
 /VOX Digital Agency Images/
+
+# leftover deployment archives (uploaded via cPanel, not part of the repo)
+upload.zip

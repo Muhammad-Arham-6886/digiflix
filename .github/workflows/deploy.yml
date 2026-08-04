@@ -1,0 +1,72 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_SITE_URL: https://voxdigitalagency.com
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (standalone output)
+        run: npm run build
+
+      - name: Assemble deploy payload
+        run: |
+          mkdir -p deploy/.next
+          cp -r .next/standalone/. deploy/
+          cp -r .next/static deploy/.next/static
+          cp -r public deploy/public
+          tar -C deploy -czf payload.tar.gz .
+
+      - name: Copy payload to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: payload.tar.gz
+          target: /tmp
+
+      - name: Extract and restart on server
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            set -e
+            APP_ROOT="${{ secrets.APP_ROOT }}"
+            if [ -z "$APP_ROOT" ]; then
+              echo "::error::APP_ROOT secret is not set"
+              exit 1
+            fi
+            mkdir -p "$APP_ROOT"
+            tar -xzf /tmp/payload.tar.gz -C "$APP_ROOT"
+            mkdir -p "$APP_ROOT/tmp"
+            touch "$APP_ROOT/tmp/restart.txt"
+            if command -v passenger-config >/dev/null 2>&1; then
+              passenger-config restart-app "$APP_ROOT" >/dev/null 2>&1 || true
+            fi
+            echo "Deploy finished. If the app does not reload, click Restart in the Node.js panel."
