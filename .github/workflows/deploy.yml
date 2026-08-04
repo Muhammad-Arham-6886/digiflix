@@ -40,6 +40,8 @@ jobs:
           cp -r .next/standalone/. payload/
           cp -r .next/static payload/.next/static
           cp -r public payload/public
+          sed -i "s/const hostname = process.env.HOSTNAME || '0.0.0.0'/const hostname = '0.0.0.0'/" payload/server.js
+          grep -c "const hostname = '0.0.0.0'" payload/server.js
 
       - name: Commit to deploy branch
         env:
