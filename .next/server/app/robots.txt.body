@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /coming-soon
+
+Host: https://voxdigitalagency.com
+Sitemap: https://voxdigitalagency.com/sitemap.xml
