@@ -3,5 +3,5 @@ Allow: /
 Disallow: /api/
 Disallow: /coming-soon
 
-Host: https://voxdigitalagency.com
-Sitemap: https://voxdigitalagency.com/sitemap.xml
+Host: https://voxdigitalagency.co
+Sitemap: https://voxdigitalagency.co/sitemap.xml
