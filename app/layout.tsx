@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
 import { siteUrl } from "@/lib/seo";
@@ -88,15 +87,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="relative min-h-screen">
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-YHFLV42QSK" strategy="beforeInteractive" />
-        <Script id="gtag-init" strategy="beforeInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-YHFLV42QSK');
-          `}
-        </Script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YHFLV42QSK"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-YHFLV42QSK');
+            `,
+          }}
+        />
         <div
           className="pointer-events-none fixed inset-0 -z-10 bg-background"
           aria-hidden="true"
