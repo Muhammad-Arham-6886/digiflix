@@ -17,8 +17,7 @@ export const siteConfig = {
   locale: "en_US",
   twitterHandle: "@voxdigitalagency",
   socials: {
-    github: "https://github.com/voxdigitalagency",
-    linkedin: "https://www.linkedin.com/company/voxdigitalagency",
+    linkedin: "https://www.linkedin.com/company/vox-digital-agency/",
     x: "https://x.com/voxdigitalagency",
     instagram: "https://instagram.com/voxdigitalagency",
   },

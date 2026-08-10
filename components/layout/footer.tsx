@@ -41,7 +41,6 @@ export function Footer() {
               </p>
               <div className="flex items-center gap-3">
                 {[
-                  { name: "Github", href: siteConfig.socials.github, icon: "Github" },
                   { name: "Linkedin", href: siteConfig.socials.linkedin, icon: "Linkedin" },
                   { name: "Instagram", href: siteConfig.socials.instagram, icon: "Instagram" },
                 ].map((s) => (
