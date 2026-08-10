@@ -235,7 +235,7 @@ export const faqItems: FaqItem[] = [
   {
     category: "support-maintenance",
     q: "How do I get started?",
-    a: "Simply contact us at info@voxdigitalagency.com with your project details. We'll discuss your goals, recommend the best solution, and provide a customized proposal with no obligation.",
+    a: "Simply contact us at info@voxdigitalagency.co with your project details. We'll discuss your goals, recommend the best solution, and provide a customized proposal with no obligation.",
   },
   {
     category: "hosting-security",

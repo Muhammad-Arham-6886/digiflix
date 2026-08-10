@@ -16,7 +16,7 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_SITE_URL: https://voxdigitalagency.com
+      NEXT_PUBLIC_SITE_URL: https://voxdigitalagency.co
     steps:
       - name: Checkout
         uses: actions/checkout@v4
