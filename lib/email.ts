@@ -18,7 +18,7 @@ export function escapeHtml(value: string): string {
 }
 
 type SendEmailArgs = {
-  to: string;
+  to: string | string[];
   subject: string;
   html: string;
   replyTo?: string;

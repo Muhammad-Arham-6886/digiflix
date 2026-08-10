@@ -1,3 +1,9 @@
+const contactTo: string[] = process.env.CONTACT_TO
+  ? process.env.CONTACT_TO.split(",")
+      .map((s) => s.trim())
+      .filter(Boolean)
+  : ["info@voxdigitalagency.co", "official.voxdigitalagency@gmail.com"];
+
 export const siteConfig = {
   name: "VOX Digital Agency",
   legalName: "VOX Digital Agency",
@@ -7,7 +13,7 @@ export const siteConfig = {
     "VOX Digital Agency delivers full IT solutions — websites, web applications, e-commerce, AI automation and cloud infrastructure. Technical SEO, 24/7 SLAs and a Lighthouse guarantee.",
   email: "info@voxdigitalagency.co",
   emailFrom: process.env.EMAIL_FROM ?? "VOX Digital Agency <onboarding@resend.dev>",
-  contactTo: process.env.CONTACT_TO ?? "info@voxdigitalagency.co",
+  contactTo,
   locale: "en_US",
   twitterHandle: "@voxdigitalagency",
   socials: {
