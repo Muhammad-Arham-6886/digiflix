@@ -1,0 +1,113 @@
+SEO Implementation Summary for VOX Digital Agency
+
+This file contains a comprehensive summary of all SEO elements implemented across the website.
+
+Sheet 1: H1 Tags
+| Page/Location | H1 Content | Type |
+|--------------|------------|------|
+| components/home/hero.tsx | Engineering High-Performance Digital Platforms | Hero H1 |
+| components/shared/page-hero.tsx | {title} (dynamic) | Dynamic H1 |
+| app/blog/[slug]/page.tsx | {post.meta.title} (blog post title) | Blog H1 |
+| app/portfolio/[slug]/page.tsx | Dynamic study title | Portfolio H1 |
+| app/services/[slug]/page.tsx | {service.name} (service name) | Service H1 |
+| app/coming-soon/page.tsx | Something exceptional is on the way | Coming Soon H1 |
+| app/error.tsx | Something glitched. | Error H1 |
+| app/not-found.tsx | This page left the build. | 404 H1 |
+
+Sheet 2: Meta Tags (Title/Description/Keywords)
+| Page | Meta Title | Meta Description | Keywords |
+|------|------------|------------------|----------|
+| Home (app/page.tsx) | VOX Digital Agency — IT Solutions & Digital Engineering | VOX Digital Agency delivers full IT solutions — websites, web applications, e-commerce, AI automation and cloud infrastructure. Technical SEO, 24/7 SLAs and a Lighthouse guarantee. | IT solutions agency, digital engineering, web development agency, software development, AI automation, cloud infrastructure, e-commerce, technical SEO, Shopify development, web performance |
+| About (app/about/page.tsx) | About VOX Digital Agency | Description about the studio | - |
+| Services (app/services/page.tsx) | Services & Capabilities | Description about full IT solutions | - |
+| Portfolio (app/portfolio/page.tsx) | Portfolio — Case Studies | Description about case studies | - |
+| Industries (app/industries/page.tsx) | Industries We Serve | Description about industries served | - |
+| Pricing (app/pricing/page.tsx) | Pricing | Description about pricing plans | - |
+| FAQs (app/faqs/page.tsx) | FAQs | Description with question answers | - |
+| Contact (app/contact/page.tsx) | Contact VOX Digital Agency | Description about contacting | - |
+| Book Consultation (app/book-consultation/page.tsx) | Book a Free Consultation | - | - |
+| Privacy (app/privacy/page.tsx) | Privacy Policy | Description about data collection | - |
+| Terms (app/terms/page.tsx) | Terms of Service | Description about terms | - |
+| Coming Soon (app/coming-soon/page.tsx) | Coming Soon | Description about new release | - |
+| Blog Post (app/blog/[slug]/page.tsx) | {post.meta.title} | {post.meta.description} | {post.meta.tags} (as keywords) |
+| Service Detail (app/services/[slug]/page.tsx) | {service.metaTitle} | {service.metaDescription} | Service-specific tags |
+| Privacy Policy | Privacy Policy | Description about data collection | - |
+| Terms of Service | Terms of Service | Description about terms | - |
+
+Sheet 3: Primary Keywords
+| Category | Keywords |
+|----------|----------|
+| Site-wide (meta keywords tag) | IT solutions agency, digital engineering, web development agency, software development, AI automation, cloud infrastructure, e-commerce, technical SEO, Shopify development, web performance |
+| Service meta titles (33 services) | Each service title includes target keywords: "Website Development", "WordPress Development", "Shopify Development", "WooCommerce Development", "Figma to WordPress", "Webflow Website Development", "Custom Web Applications", "AI Agents & Business Automation", "Technical SEO & Performance", "Google Business Profile Management", "UI/UX Design & Branding", "Logo & Brand Design", etc. |
+| Blog post tags | Used as keywords, displayed as badges |
+| Service tags | Technologies/frameworks per service (Next.js, React, TypeScript, etc.) |
+
+Sheet 4: Open Graph (og:) Tags
+| Property | Content | Pages |
+|----------|---------|-------|
+| og:title | ${siteConfig.name} — IT Solutions & Digital Engineering | All pages |
+| og:description | siteConfig.description | All pages |
+| og:type | website (article for blog) | Page-type dependent |
+| og:siteName | VOX Digital Agency | All pages |
+| og:locale | en_US | All pages |
+| og:url | Dynamic per page | All pages |
+| og:image | ${siteUrl}/images/og.png (or per-page cover) | All pages |
+| og:images | Array with [{url, width, height, alt}] | Some pages |
+
+Sheet 5: Twitter Card Tags
+| Property | Content | |
+|----------|---------|---|
+| twitter:card | summary_large_image | |
+| twitter:title | Same as og:title | |
+| twitter:description | Same as og:description | |
+| twitter:site | @voxdigitalagency | |
+| twitter:images | Same as og:image | |
+
+Sheet 6: Robots Meta
+| Name | Value | Pages |
+|------|-------|-------|
+| index | true | All pages |
+| follow | true | All pages |
+| googleBot.index | true | All pages |
+| googleBot.follow | true | All pages |
+| googleBot.max-image-preview | large | All pages |
+| googleBot.max-snippet | -1 (no limit) | All pages |
+
+Sheet 7: Canonical URLs
+| Page | Canonical URL |
+|------|--------------|
+| All pages | Absolute URL based on siteConfig.url with /%s path |
+| Dynamic routes | /blog/{post.slug}, /services/{service.slug} |
+
+Sheet 8: Structured Data (JSON-LD)
+| Type | Pages | Key Fields |
+|------|-------|-----------|
+| Organization | Home, About, Services, Contact | name, url, logo, email, sameAs (LinkedIn, X, Instagram), contactPoint |
+| Service | Service detail pages | @type: "Service", serviceType, name, description, provider, url |
+| Article | Blog detail pages | @type: "Article", headline, description, datePublished, author, publisher, image |
+| BreadcrumbList | Pages with breadcrumbs | @type: "BreadcrumbList", itemListElement with position, name, item |
+
+Sheet 9: Sitemap
+| Priority | Change Frequency | Routes |
+|----------|---------------|--------|
+| 1.0 | weekly | Home |
+| 0.7 | weekly | About, Services, Portfolio, Industries, Pricing, Process, Blog, Testimonials, Contact, Book Consultation, Privacy, Terms, Cookies |
+| 0.8 | monthly | 33 Service routes |
+| 0.6 | monthly | Blog routes (/blog/{post.slug}) |
+
+Sheet 10: Robots Rules
+| User Agent | Allow | Disallow | Sitemap |
+|-----------|-------|----------|---------|
+| * | / | /api/, /coming-soon | ${siteUrl}/sitemap.xml |
+| host | siteUrl | | |
+
+Sheet 11: Additional SEO Elements
+| Element | Description | Location |
+|---------|-------------|----------|
+| Lighthouse guarantee | 95+ score mentioned throughout | Hero component |
+| SLA uptime | 99.99% | Hero component |
+| Core Web Vitals | 98 score mentioned | Hero component |
+| Search visibility | +184% mentioned | Hero component |
+| Conversion lift | +184% mentioned | Hero component |
+| Technical SEO | Explicitly in service descriptions and footer | Throughout |
+| Verification | Google Search Console: alR8QOkp-YNgbHdhl55ezng2y-ZHEvciWjajMF4bYnI | layout.tsx |

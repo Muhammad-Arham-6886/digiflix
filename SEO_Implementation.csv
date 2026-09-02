@@ -1,0 +1,92 @@
+Section,Page,Element,Content
+H1 Tags,Home - Hero (components/home/hero.tsx),H1,Engineering High-Performance Digital Platforms
+H1 Tags,All Pages (components/shared/page-hero.tsx),H1,Dynamic {title} prop
+H1 Tags,Blog Post (app/blog/[slug]/page.tsx),H1,Dynamic {post.meta.title}
+H1 Tags,Portfolio Post (app/portfolio/[slug]/page.tsx),H1,Dynamic study title
+H1 Tags,Service Post (app/services/[slug]/page.tsx),H1,Dynamic {service.name}
+H1 Tags,Coming Soon (app/coming-soon/page.tsx),H1,Something exceptional is on the way
+H1 Tags,Error Page (app/error.tsx),H1,Something glitched.
+H1 Tags,404 Page (app/not-found.tsx),H1,This page left the build.
+Meta Title,Home (app/page.tsx),Title,"VOX Digital Agency — IT Solutions & Digital Engineering"
+Meta Title,About (app/about/page.tsx),Title,About VOX Digital Agency
+Meta Title,Services (app/services/page.tsx),Title,Services & Capabilities
+Meta Title,Portfolio (app/portfolio/page.tsx),Title,Portfolio — Case Studies
+Meta Title,Industries (app/industries/page.tsx),Title,Industries We Serve
+Meta Title,Pricing (app/pricing/page.tsx),Title,Pricing
+Meta Title,FAQs (app/faqs/page.tsx),Title,FAQs
+Meta Title,Contact (app/contact/page.tsx),Title,Contact VOX Digital Agency
+Meta Title,Book Consultation (app/book-consultation/page.tsx),Title,Book a Free Consultation
+Meta Title,Privacy (app/privacy/page.tsx),Title,Privacy Policy
+Meta Title,Terms (app/terms/page.tsx),Title,Terms of Service
+Meta Title,Coming Soon (app/coming-soon/page.tsx),Title,Coming Soon
+Meta Title,Blog Post (app/blog/[slug]/page.tsx),Title,Dynamic {post.meta.title} | VOX Digital Agency
+Meta Title,Service Detail (app/services/[slug]/page.tsx),Title,Dynamic {service.metaTitle} | VOX Digital Agency
+Meta Description,Home (app/page.tsx),Description,"VOX Digital Agency delivers full IT solutions — websites, web applications, e-commerce, AI automation and cloud infrastructure. Technical SEO, 24/7 SLAs and a Lighthouse guarantee."
+Meta Description,About (app/about/page.tsx),Description,Description about the studio
+Meta Description,Services (app/services/page.tsx),Description,Description about full IT solutions
+Meta Description,Portfolio (app/portfolio/page.tsx),Description,Description about case studies
+Meta Description,Industries (app/industries/page.tsx),Description,Description about industries served
+Meta Description,Pricing (app/pricing/page.tsx),Description,Description about pricing plans
+Meta Description,FAQs (app/faqs/page.tsx),Description,Description with question answers
+Meta Description,Contact (app/contact/page.tsx),Description,Description about contacting
+Meta Description,Book Consultation (app/book-consultation/page.tsx),Description,-
+Meta Description,Privacy (app/privacy/page.tsx),Description,Description about data collection
+Meta Description,Terms (app/terms/page.tsx),Description,Description about terms
+Meta Description,Coming Soon (app/coming-soon/page.tsx),Description,Description about new release
+Meta Description,Blog Post (app/blog/[slug]/page.tsx),Description,Dynamic {post.meta.description}
+Meta Description,Service Detail (app/services/[slug]/page.tsx),Description,Dynamic {service.metaDescription}
+Meta Keywords,Home (app/page.tsx),Keywords,"IT solutions agency, digital engineering, web development agency, software development, AI automation, cloud infrastructure, e-commerce, technical SEO, Shopify development, web performance"
+Meta Keywords,Blog Post (app/blog/[slug]/page.tsx),Keywords,Dynamic {post.meta.tags}
+Meta Keywords,Service Detail (app/services/[slug]/page.tsx),Keywords,Dynamic {service.tags}
+Open Graph,All Pages,og:title,VOX Digital Agency — IT Solutions & Digital Engineering
+Open Graph,All Pages,og:description,siteConfig.description
+Open Graph,All Pages,og:type,website (article for blog posts)
+Open Graph,All Pages,og:siteName,VOX Digital Agency
+Open Graph,All Pages,og:locale,en_US
+Open Graph,All Pages,og:url,Dynamic per page
+Open Graph,All Pages,og:image,${siteUrl}/images/og.png or per-page cover image
+Open Graph,All Pages,og:images,Array with url / width (1200) / height (630) / alt
+Twitter Card,All Pages,twitter:card,summary_large_image
+Twitter Card,All Pages,twitter:title,Same as og:title
+Twitter Card,All Pages,twitter:description,Same as og:description
+Twitter Card,All Pages,twitter:site,@voxdigitalagency
+Twitter Card,All Pages,twitter:images,Same as og:image
+Robots,All Pages,index,true
+Robots,All Pages,follow,true
+Robots,All Pages,googleBot.index,true
+Robots,All Pages,googleBot.follow,true
+Robots,All Pages,googleBot.max-image-preview,large
+Robots,All Pages,googleBot.max-snippet,-1 (no limit)
+Canonical URL,All Pages,canonical,Absolute URL based on siteConfig.url with /path
+JSON-LD Schema,Home / About / Services / Contact,Organization,"@type: Organization | name: VOX Digital Agency | url | logo | email: info@voxdigitalagency.co | sameAs: LinkedIn / X / Instagram | contactPoint"
+JSON-LD Schema,Service Detail Pages,Service,"@type: Service | serviceType | name | description | provider: Organization | url: /services/{slug}"
+JSON-LD Schema,Blog Detail Pages,Article,"@type: Article | headline | description | datePublished | author: Organization | publisher: Organization | image"
+JSON-LD Schema,Pages with Breadcrumbs,BreadcrumbList,"@type: BreadcrumbList | itemListElement with position / name / item URL"
+Sitemap,Home (/),Priority 1.0 / Change Freq Weekly,
+Sitemap,About (/about),Priority 0.7 / Change Freq Weekly,
+Sitemap,Services (/services),Priority 0.7 / Change Freq Weekly,
+Sitemap,Portfolio (/portfolio),Priority 0.7 / Change Freq Weekly,
+Sitemap,Industries (/industries),Priority 0.7 / Change Freq Weekly,
+Sitemap,Pricing (/pricing),Priority 0.7 / Change Freq Weekly,
+Sitemap,Process (/process),Priority 0.7 / Change Freq Weekly,
+Sitemap,Blog (/blog),Priority 0.6 / Change Freq Monthly,
+Sitemap,Testimonials (/testimonials),Priority 0.7 / Change Freq Weekly,
+Sitemap,Contact (/contact),Priority 0.7 / Change Freq Weekly,
+Sitemap,Book Consultation (/book-consultation),Priority 0.7 / Change Freq Weekly,
+Sitemap,Privacy (/privacy),Priority 0.7 / Change Freq Weekly,
+Sitemap,Terms (/terms),Priority 0.7 / Change Freq Weekly,
+Sitemap,Cookies (/cookies),Priority 0.7 / Change Freq Weekly,
+Sitemap,Coming Soon (/coming-soon),N/A - Blocked from indexing,
+Sitemap,33 Service Routes (/services/{slug}),Priority 0.8 / Change Freq Monthly,
+Sitemap,Blog Routes (/blog/{slug}),Priority 0.6 / Change Freq Monthly,
+Robots.txt,All User Agents,Allow,/
+Robots.txt,All User Agents,Disallow,/api/
+Robots.txt,All User Agents,Disallow,/coming-soon
+Robots.txt,All User Agents,Sitemap,${siteUrl}/sitemap.xml
+Robots.txt,All User Agents,host,siteUrl
+Verification,layout.tsx,Google Search Console,alR8QOkp-YNgbHdhl55ezng2y-ZHEvciWjajMF4bYnI
+SEO Copy,Home - Hero (components/home/hero.tsx),Lighthouse Guarantee,95+ score
+SEO Copy,Home - Hero (components/home/hero.tsx),SLA Uptime,99.99%
+SEO Copy,Home - Hero (components/home/hero.tsx),Core Web Vitals,98 score
+SEO Copy,Home - Hero (components/home/hero.tsx),Search Visibility,+184%
+SEO Copy,Home - Hero (components/home/hero.tsx),Conversion Lift,+184%
