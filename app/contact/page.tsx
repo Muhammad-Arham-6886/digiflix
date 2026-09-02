@@ -16,6 +16,7 @@ export const metadata: Metadata = buildMetadata({
 
 const contactPoints = [
   { icon: "Mail", label: "Email us", value: siteConfig.email, href: `mailto:${siteConfig.email}` },
+  { icon: "MessageSquare", label: "WhatsApp us", value: siteConfig.whatsappNumber, href: siteConfig.whatsappLink },
   { icon: "Clock", label: "Response time", value: "Within 1 business day", href: undefined },
   { icon: "MapPin", label: "Based in", value: siteConfig.address, href: undefined },
   { icon: "Calendar", label: "Prefer a call?", value: "Book a free 30-minute consultation", href: "/book-consultation" },

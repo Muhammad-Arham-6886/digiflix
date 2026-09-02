@@ -43,6 +43,7 @@ export function Footer() {
                 {[
                   { name: "Linkedin", href: siteConfig.socials.linkedin, icon: "Linkedin" },
                   { name: "Instagram", href: siteConfig.socials.instagram, icon: "Instagram" },
+                  { name: "WhatsApp", href: siteConfig.socials.whatsapp, icon: "WhatsApp" },
                 ].map((s) => (
                   <a
                     key={s.name}

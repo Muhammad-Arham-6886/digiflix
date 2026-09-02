@@ -7,6 +7,7 @@ import { siteUrl } from "@/lib/seo";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollProgress, PageTransition } from "@/components/layout/page-transition";
+import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -112,6 +113,7 @@ export default function RootLayout({
         <Header />
         <PageTransition>{children}</PageTransition>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

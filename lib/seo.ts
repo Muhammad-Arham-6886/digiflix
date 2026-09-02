@@ -81,6 +81,7 @@ export function organizationJsonLd() {
       "@type": "ContactPoint",
       contactType: "sales",
       email: siteConfig.email,
+      telephone: siteConfig.whatsappNumber,
     },
   };
 }

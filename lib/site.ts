@@ -16,10 +16,14 @@ export const siteConfig = {
   contactTo,
   locale: "en_US",
   twitterHandle: "@voxdigitalagency",
+  whatsappNumber: "+971551506155",
+  whatsappLink:
+    "https://wa.me/971551506155?text=Hi%20VOX%20Digital%20Agency%2C%20I%27d%20like%20to%20discuss%20a%20project.",
   socials: {
     linkedin: "https://www.linkedin.com/company/vox-digital-agency/",
     x: "https://x.com/voxdigitalagency",
     instagram: "https://instagram.com/voxdigitalagency",
+    whatsapp: "https://wa.me/971551506155",
   },
   address: "Remote Worldwide",
 } as const;
