@@ -40,7 +40,7 @@ export const services: Service[] = [
       "We build high-performance marketing websites, corporate platforms and content experiences on a modern React stack — server-side rendering, edge caching, streaming and image pipelines come as standard. Every page loads fast, ranks well and feels effortless, and a 95+ Lighthouse score is written into the contract.",
     category: "Web Development",
     icon: "Globe",
-    image: "/images/programmer-close-up.jpg",
+    image: "/images/stock/2150038838.jpg",
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     features: [
       "Server-rendered builds with streaming",
@@ -104,7 +104,7 @@ export const services: Service[] = [
       "We design and build Shopify stores that feel like bespoke product — custom themes, Hydrogen/Remix storefronts, checkout extensions and custom front-ends that push conversion rate and Core Web Vitals in the same sprint.",
     category: "E-commerce",
     icon: "ShoppingBag",
-    image: "/images/stock/18705.jpg",
+    image: "/images/stock/2177.jpg",
     tags: ["Shopify", "Hydrogen", "Remix", "Liquid", "Storefront API"],
     features: [
       "Custom Shopify themes and app integrations",
@@ -134,7 +134,7 @@ export const services: Service[] = [
       "WooCommerce done right. We architect stores that stay fast past 10,000 products — optimized queries, headless storefronts, custom payment flows and operations tooling that keeps your team in control.",
     category: "E-commerce",
     icon: "ShoppingCart",
-    image: "/images/stock/17717.jpg",
+    image: "/images/stock/8522.jpg",
     tags: ["WooCommerce", "WordPress", "Headless", "PHP", "WPGraphQL"],
     features: [
       "Headless WooCommerce with Next.js storefronts",
@@ -164,7 +164,7 @@ export const services: Service[] = [
       "We turn your Figma files into a fast, maintainable WordPress site with hand-built block themes and a reusable component library. Every color, spacing token and interaction lands exactly as designed — and stays editable for your editors.",
     category: "Web Development",
     icon: "PenTool",
-    image: "/images/stock/138498.jpg",
+    image: "/images/stock/2151320702.jpg",
     tags: ["Figma", "WordPress", "Block Themes", "Custom Blocks", "CSS"],
     features: [
       "Design-to-code conversion with pixel accuracy",
@@ -198,6 +198,7 @@ export const services: Service[] = [
       "We design and build professional Webflow sites with a designer's eye and an engineer's discipline. Clean class architecture, reusable CMS collections, structured SEO and smooth scroll interactions — all inside a CMS your team can actually edit, so you're never locked out of your own website.",
     category: "Web Development",
     icon: "Boxes",
+    image: "/images/stock/2151320690.jpg",
     tags: ["Webflow", "CMS", "Figma", "Responsive Design", "Interactions"],
     features: [
       "Custom Webflow builds from Figma or from scratch",
@@ -231,7 +232,7 @@ export const services: Service[] = [
       "From investor dashboards to multi-tenant SaaS, we design and ship web applications that hold up under real usage. Next.js and React on the front end, Node.js and Express.js behind robust REST and GraphQL APIs — with auth, RBAC, real-time data, billing and analytics built in, not bolted on.",
     category: "Web Development",
     icon: "LayoutDashboard",
-    image: "/images/stock/2817.jpg",
+    image: "/images/stock/77678.jpg",
     tags: ["Next.js", "Node.js", "React", "Express.js", "PostgreSQL"],
     features: [
       "Multi-tenant architecture and RBAC",
@@ -291,7 +292,7 @@ export const services: Service[] = [
       "Technical SEO is an engineering discipline. We fix the foundations — rendering, crawl budget, structured data, internal links and Core Web Vitals — and back every engagement with a Lighthouse score guarantee in writing.",
     category: "SEO & Performance",
     icon: "Gauge",
-    image: "/images/stock/94833.jpg",
+    image: "/images/stock/282388.jpg",
     tags: ["Technical SEO", "Core Web Vitals", "Schema.org", "Sitemaps", "Analytics"],
     features: [
       "Lighthouse 95+ guarantee in the contract",
@@ -321,6 +322,7 @@ export const services: Service[] = [
       "Your Google Business Profile is the first thing local customers see. We set up, verify and optimize your profile end to end — categories, service areas, photos, posts and review flows — then layer on citations and local landing pages so you rank in the map pack and convert searchers into customers.",
     category: "SEO & Performance",
     icon: "MapPin",
+    image: "/images/google-business-profile.jpg",
     tags: ["Google Business Profile", "Local SEO", "Reviews", "Google Maps", "Citations"],
     features: [
       "Profile setup, verification and full optimization",
@@ -354,7 +356,7 @@ export const services: Service[] = [
       "Design is part of the engineering brief. We craft user flows, interfaces and design systems that hold up in production — tokens, variants and specs your developers can build from without drift, backed by research and accessibility from day one.",
     category: "Design & Branding",
     icon: "Palette",
-    image: "/images/stock/8522.jpg",
+    image: "/images/ui-ux-design.jpg",
     tags: ["Figma", "Design Systems", "Motion Design", "UX Research", "Prototyping"],
     features: [
       "UX research, user flows and wireframes",
@@ -384,7 +386,7 @@ export const services: Service[] = [
       "Your brand is the first impression and the last thing customers remember. We design logos and identity systems that look sharp on a favicon and hold up on a billboard — with colors, typography and usage rules documented so every team applies them consistently.",
     category: "Design & Branding",
     icon: "Gem",
-    image: "/images/stock/18706.jpg",
+    image: "/images/logo-brand-design.jpg",
     tags: ["Logo Design", "Brand Identity", "Typography", "Brand Guidelines", "Art Direction"],
     features: [
       "Logo concepts, iterations and final marks",

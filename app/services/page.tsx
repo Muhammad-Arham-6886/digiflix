@@ -6,12 +6,12 @@ import { Icon } from "@/components/shared/icon";
 import { ButtonLink } from "@/components/ui/button";
 import { FinalCta } from "@/components/home/final-cta";
 import { serviceCategoryMeta } from "@/lib/services";
-import { buildMetadata, organizationJsonLd } from "@/lib/seo";
+import { buildMetadata, organizationJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Services & Capabilities",
+  title: "Services & Capabilities — Worldwide Full-Service Digital Agency",
   description:
-    "Web development, e-commerce, AI agents, technical SEO and cloud infrastructure — full IT solutions from one team.",
+    "World-class web development, e-commerce, AI automation, technical SEO, and UI/UX branding delivered worldwide from one senior agency team.",
   path: "/services",
 });
 
@@ -21,10 +21,21 @@ export default function ServicesPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "Services", path: "/services" },
+            ])
+          ),
+        }}
+      />
       <PageHero
-        eyebrow="Services"
-        title="The full stack. One team. Zero extra infrastructure."
-        subtitle="Every capability below ships as one deployable platform — frontend, APIs, automation and cloud running on the same infrastructure as your front end."
+        eyebrow="Services & Capabilities"
+        title="Complete Digital Excellence. One Senior Agency."
+        subtitle="From bespoke brand identity and conversion-engineered storefronts to autonomous AI operations and global technical SEO — we craft category-defining digital ecosystems."
       />
 
       <CapabilitiesGrid />

@@ -5,12 +5,12 @@ import { Icon } from "@/components/shared/icon";
 import { ButtonLink } from "@/components/ui/button";
 import { ContactForm } from "@/components/forms/contact-form";
 import { siteConfig } from "@/lib/site";
-import { buildMetadata, organizationJsonLd } from "@/lib/seo";
+import { buildMetadata, organizationJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact VOX Digital Agency",
+  title: "Contact Us — Global Client Inquiries",
   description:
-    "Start a project with VOX. Tell us what you're building and a senior engineer — not a sales rep — will reply within one business day.",
+    "Start a project with VOX Digital Agency. Tell us what you're building — serving clients worldwide with replies from senior engineers within one business day.",
   path: "/contact",
 });
 
@@ -18,7 +18,7 @@ const contactPoints = [
   { icon: "Mail", label: "Email us", value: siteConfig.email, href: `mailto:${siteConfig.email}` },
   { icon: "MessageSquare", label: "WhatsApp us", value: siteConfig.whatsappNumber, href: siteConfig.whatsappLink },
   { icon: "Clock", label: "Response time", value: "Within 1 business day", href: undefined },
-  { icon: "MapPin", label: "Based in", value: siteConfig.address, href: undefined },
+  { icon: "MapPin", label: "Serving", value: siteConfig.address, href: undefined },
   { icon: "Calendar", label: "Prefer a call?", value: "Book a free 30-minute consultation", href: "/book-consultation" },
 ];
 
@@ -26,6 +26,17 @@ export default function ContactPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "Contact", path: "/contact" },
+            ])
+          ),
+        }}
+      />
       <PageHero
         eyebrow="Contact"
         title="Let's talk about your platform."

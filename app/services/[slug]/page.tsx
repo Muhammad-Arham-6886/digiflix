@@ -9,7 +9,7 @@ import { Icon } from "@/components/shared/icon";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button";
 import { FaqAccordion } from "@/components/services/faq-accordion";
-import { buildMetadata, serviceJsonLd, breadcrumbJsonLd } from "@/lib/seo";
+import { buildMetadata, serviceJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -29,6 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: service.metaTitle.replace(" | VOX Digital Agency", ""),
     description: service.metaDescription,
     path: `/services/${service.slug}`,
+    keywords: service.tags,
   });
 }
 
@@ -43,6 +44,9 @@ export default async function ServicePage({ params }: PageProps) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd(service.slug, service.name, service.description)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Services", path: "/services" }, { name: service.name, path: `/services/${service.slug}` }])) }} />
+      {service.faq && service.faq.length > 0 && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(service.faq)) }} />
+      )}
 
       <section className="relative overflow-hidden pt-36 pb-14 md:pt-44 md:pb-20">
         <div className="grid-bg absolute inset-0 [mask-image:radial-gradient(ellipse_70%_70%_at_50%_10%,black,transparent)]" aria-hidden="true" />
@@ -82,7 +86,7 @@ export default async function ServicePage({ params }: PageProps) {
                 <div className="absolute -inset-4 rounded-3xl bg-primary-500/10 blur-2xl" aria-hidden="true" />
                 <div className="relative overflow-hidden rounded-3xl border border-line-strong shadow-card">
                   <Image
-                    src={service.image ?? "/images/programmer-close-up.jpg"}
+                    src={service.image ?? "/images/stock/2150038838.jpg"}
                     alt={`${service.name} — VOX Digital Agency`}
                     width={1000}
                     height={750}

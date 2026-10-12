@@ -10,10 +10,10 @@ type Stat = {
 };
 
 const stats: Stat[] = [
-  { to: 99.8, decimals: 1, suffix: "%", label: "Delivery rate across all engagements" },
-  { to: 95, suffix: "+", label: "Lighthouse score, guaranteed in writing" },
-  { value: "$40M+", label: "Client revenue influenced" },
-  { to: 24, suffix: "/7", label: "Uptime SLA with on-call response" },
+  { to: 99.8, decimals: 1, suffix: "%", label: "On-time delivery across global projects" },
+  { value: "150+", label: "Bespoke digital platforms & brands shipped" },
+  { value: "$40M+", label: "Client revenue influenced & generated" },
+  { to: 24, suffix: "/7", label: "Global support & dedicated agency care" },
 ];
 
 export function Stats() {

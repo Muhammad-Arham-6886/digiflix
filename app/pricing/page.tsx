@@ -6,7 +6,7 @@ import { Icon } from "@/components/shared/icon";
 import { ButtonLink } from "@/components/ui/button";
 import { FaqAccordion } from "@/components/services/faq-accordion";
 import { pricingTiers, servicePrices, carePlans, pricingFaq } from "@/lib/pricing";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 export const metadata: Metadata = buildMetadata({
   title: "Pricing & Plans",
@@ -30,6 +30,21 @@ const toneBorder = {
 export default function PricingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "Pricing", path: "/pricing" },
+            ])
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(pricingFaq)) }}
+      />
       <PageHero
         eyebrow="Pricing"
         title="Clear pricing. No surprises."
@@ -105,6 +120,12 @@ export default function PricingPage() {
               </StaggerItem>
             ))}
           </Stagger>
+
+          <div className="mt-8 rounded-2xl border border-line bg-surface-2/40 px-6 py-4 text-center">
+            <p className="text-xs text-ink-faint md:text-sm">
+              <span className="font-semibold text-ink-muted">Note:</span> These prices are starting prices for website projects. Ecommerce functionality, paid third-party tools, hosting, and substantial custom development can be quoted separately.
+            </p>
+          </div>
         </div>
       </section>
 

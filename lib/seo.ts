@@ -72,16 +72,65 @@ export function organizationJsonLd() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: siteConfig.name,
+    legalName: siteConfig.legalName,
     url: siteConfig.url,
     logo: absoluteUrl("/images/logo/banner.png"),
+    image: absoluteUrl("/images/og.png"),
     email: siteConfig.email,
     description: siteConfig.description,
+    telephone: siteConfig.whatsappNumber,
     sameAs: Object.values(siteConfig.socials),
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "sales",
-      email: siteConfig.email,
-      telephone: siteConfig.whatsappNumber,
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "Worldwide",
+    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        email: siteConfig.email,
+        telephone: siteConfig.whatsappNumber,
+        availableLanguage: ["English"],
+        areaServed: "Worldwide",
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: siteConfig.email,
+        telephone: siteConfig.whatsappNumber,
+        availableLanguage: ["English"],
+        areaServed: "Worldwide",
+      },
+    ],
+    knowsAbout: [
+      "Web Development",
+      "Next.js Development",
+      "WordPress Development",
+      "Shopify Development",
+      "WooCommerce Development",
+      "Custom Web Applications",
+      "AI Agents & Automation",
+      "Technical SEO",
+      "Core Web Vitals Optimization",
+      "UI/UX Design",
+    ],
+  };
+}
+
+export function websiteJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteConfig.name,
+    alternateName: ["VOX Digital", "VOX Agency"],
+    url: siteConfig.url,
+    description: siteConfig.description,
+    inLanguage: "en-US",
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+      logo: absoluteUrl("/images/logo/banner.png"),
     },
   };
 }
@@ -98,21 +147,54 @@ export function serviceJsonLd(slug: string, name: string, description: string) {
       name: siteConfig.name,
       url: siteConfig.url,
     },
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "Worldwide",
+    },
     url: absoluteUrl(`/services/${slug}`),
   };
 }
 
-export function articleJsonLd(title: string, description: string, publishedTime: string, cover: string) {
+export function articleJsonLd(
+  title: string,
+  description: string,
+  publishedTime: string,
+  cover: string,
+  slug?: string
+) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
     description,
     datePublished: publishedTime,
-    author: { "@type": "Organization", name: siteConfig.name },
-    publisher: { "@type": "Organization", name: siteConfig.name },
+    author: { "@type": "Organization", name: siteConfig.name, url: siteConfig.url },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+      logo: {
+        "@type": "ImageObject",
+        url: absoluteUrl("/images/logo/banner.png"),
+      },
+    },
     image: absoluteUrl(cover),
-    mainEntityOfPage: absoluteUrl("/"),
+    mainEntityOfPage: slug ? absoluteUrl(`/blog/${slug}`) : absoluteUrl("/blog"),
+  };
+}
+
+export function faqJsonLd(faqs: { q: string; a: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.a,
+      },
+    })),
   };
 }
 

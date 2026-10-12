@@ -8,11 +8,11 @@ tags: ["Core Web Vitals", "Performance", "Lighthouse", "Next.js"]
 cover: "/images/programmer-close-up.jpg"
 ---
 
-Getting a page to 95+ Lighthouse is not about a dozen random tricks. It's about three levers: how much JavaScript you ship, how fast the first paint lands, and how well you handle your largest element.
+Getting a page to 95+ Lighthouse is not about a dozen random tricks. It's about three levers: how much JavaScript you ship, how fast the first paint lands, and how well you handle your largest element. At [VOX Digital Agency](/about), this performance standard is written directly into our contracts.
 
 ## 1. Stop shipping what users don't need
 
-The single biggest performance win is shipping less. Server components in the App Router render most of the page on the server, so the client only gets interactive islands.
+The single biggest performance win is shipping less. Server components in the Next.js App Router render most of the page on the server, so the client only gets interactive islands. This is core to our [modern website development](/services/website-development) architecture.
 
 Rules we enforce:
 
@@ -40,6 +40,6 @@ Reserve space for images and embeds with `aspect-ratio`. Set font fallbacks that
 
 ## 5. Make the budget part of CI
 
-A score is only a score until it regresses. We put the Lighthouse budget in CI: any PR that drops a page below target fails the build. Performance stops being a launch-day prayer and becomes a property of the codebase.
+A score is only a score until it regresses. We put the Lighthouse budget in CI: any PR that drops a page below target fails the build. Learn more about how we architect this in our [Technical SEO Guide](/blog/technical-seo-nextjs-app-router).
 
-Go from 60 to 95 the same way every time: less JavaScript, earlier paint, disciplined assets, zero shift, enforced budgets.
+Go from 60 to 95 the same way every time: less JavaScript, earlier paint, disciplined assets, zero shift, enforced budgets. Need help boosting your site's speed? Discover our [Technical SEO & Performance services](/services/seo-optimization) or review our [monthly maintenance care plans](/pricing) to keep your speed permanently green. [Contact our team](/contact) to get a free speed audit.

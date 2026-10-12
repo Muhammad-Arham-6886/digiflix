@@ -4,12 +4,12 @@ import { Stagger, StaggerItem } from "@/components/shared/reveal";
 import { Icon } from "@/components/shared/icon";
 import { ButtonLink } from "@/components/ui/button";
 import { testimonials } from "@/lib/testimonials";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Client Testimonials",
+  title: "Client Testimonials & Reviews",
   description:
-    "What clients say about VOX Digital Agency — 5-star experiences, honest communication and quality delivered every time.",
+    "What global clients say about VOX Digital Agency — 5-star experiences, transparent engineering communication and high-performance delivery worldwide.",
   path: "/testimonials",
 });
 
@@ -30,6 +30,17 @@ function Stars({ count }: { count: number }) {
 export default function TestimonialsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "Testimonials", path: "/testimonials" },
+            ])
+          ),
+        }}
+      />
       <PageHero
         eyebrow="Testimonials"
         title="Endorsements, not adjectives."

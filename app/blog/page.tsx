@@ -4,12 +4,12 @@ import { Reveal } from "@/components/shared/reveal";
 import { BlogCard } from "@/components/blog/blog-card";
 import { NewsletterForm } from "@/components/forms/newsletter-form";
 import { getPosts } from "@/lib/blog";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Blog — Engineering Notes",
+  title: "Blog — Engineering Notes & Technical SEO",
   description:
-    "Engineering notes from VOX Digital Agency — web performance, AI agents, e-commerce and motion design systems.",
+    "Engineering notes from VOX Digital Agency — Next.js architecture, technical SEO, web performance, AI automation and motion design systems.",
   path: "/blog",
 });
 
@@ -19,6 +19,17 @@ export default function BlogPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "Blog", path: "/blog" },
+            ])
+          ),
+        }}
+      />
       <PageHero
         eyebrow="Blog"
         title="Engineering notes from the studio floor."

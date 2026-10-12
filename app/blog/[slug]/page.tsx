@@ -51,7 +51,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd(post.meta.title, post.meta.description, post.meta.date, post.meta.cover)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd(post.meta.title, post.meta.description, post.meta.date, post.meta.cover, post.slug)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Blog", path: "/blog" }, { name: post.meta.title, path: `/blog/${post.slug}` }])) }} />
 
       <article className="relative pt-36 pb-20 md:pt-44 md:pb-24">

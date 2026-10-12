@@ -19,9 +19,9 @@ export function CapabilitiesGrid({ limit }: { limit?: number }) {
     <section className="relative py-20 md:py-28" aria-label="Capabilities">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Capabilities"
-          title="One team. The full platform stack."
-          subtitle="From marketing sites to autonomous AI agents — frontend, APIs, data and cloud all shipped and owned end to end, with zero brittle multi-vendor glue."
+          eyebrow="Our Services"
+          title="One agency. Complete digital excellence."
+          subtitle="From bespoke brand websites and high-converting e-commerce to custom digital platforms and intelligent AI automation — everything crafted under one roof with flawless execution."
         />
 
         <div className="mb-10 flex flex-wrap justify-center gap-2" role="tablist" aria-label="Filter capabilities by category">

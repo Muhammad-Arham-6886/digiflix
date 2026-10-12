@@ -5,10 +5,10 @@ import { Reveal } from "@/components/shared/reveal";
 import { Icon } from "@/components/shared/icon";
 import { ButtonLink } from "@/components/ui/button";
 import { FinalCta } from "@/components/home/final-cta";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Our Process",
+  title: "Our Process — Engineered Delivery",
   description:
     "The six-phase VOX engagement process — discover, architect, design, build, launch and grow. Defined outcomes at every stage and a fixed budget.",
   path: "/process",
@@ -35,6 +35,17 @@ const principles = [
 export default function ProcessPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "Process", path: "/process" },
+            ])
+          ),
+        }}
+      />
       <PageHero
         eyebrow="Process"
         title="A process that removes surprise."

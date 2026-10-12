@@ -32,13 +32,13 @@ export function LiftCompare() {
         <Reveal className="mb-10 flex flex-col items-center gap-6 text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary-400/30 bg-primary-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary-200">
             <IconDot />
-            The VOX Lift
+            The Agency Standard
           </span>
           <h2 className="font-display text-3xl font-bold leading-tight tracking-tight text-ink sm:text-4xl md:text-5xl">
-            What happens when engineering <span className="text-gradient">takes performance personally</span>
+            Transforming ordinary websites into <span className="text-gradient">high-growth digital flagships</span>
           </h2>
           <p className="max-w-2xl text-ink-muted md:text-lg">
-            Flip the toggle. Same business, same traffic — one platform engineered to its full potential.
+            Flip the toggle. Compare a generic legacy template against a bespoke digital experience designed and built by VOX.
           </p>
 
           <div
@@ -152,7 +152,7 @@ export function LiftCompare() {
 
               <div className="flex items-center justify-center gap-2 rounded-2xl border border-accent-400/20 bg-accent-500/5 px-4 py-3 text-sm text-ink-muted">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent-400" />
-                Measured on the same Lighthouse budget we guarantee in every contract.
+                Proven performance metrics benchmarked across our global agency client portfolio.
               </div>
             </div>
           </div>

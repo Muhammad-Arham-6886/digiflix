@@ -5,63 +5,75 @@ import { SectionHeading } from "@/components/shared/section-heading";
 import { Reveal, Stagger, StaggerItem } from "@/components/shared/reveal";
 import { Icon } from "@/components/shared/icon";
 import { FinalCta } from "@/components/home/final-cta";
-import { buildMetadata, organizationJsonLd } from "@/lib/seo";
+import { buildMetadata, organizationJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About VOX Digital Agency",
+  title: "About Us — Worldwide Full-Service Digital Agency",
   description:
-    "VOX is an IT solutions and digital engineering studio. Learn how we work, what we believe and why clients keep coming back.",
+    "VOX is a premier worldwide digital agency uniting brand design, modern engineering, and AI automation to build category-defining digital flagships.",
   path: "/about",
 });
 
 const values = [
   {
-    icon: "Cpu",
-    title: "Engineering over opinions",
-    body: "Every decision is defensible with data — a benchmark, a test, a Lighthouse budget. If we can't measure it, we don't ship it.",
+    icon: "Sparkles",
+    title: "Craft over shortcuts",
+    body: "Every detail matters — typography, fluid motion, architecture, and conversion psychology. We build digital flagships that captivate audiences and deliver measurable growth.",
   },
   {
     icon: "Gauge",
-    title: "Performance is a feature",
-    body: "Speed is not polish; it's product. A 95+ Lighthouse score is written into our contracts, not our marketing.",
+    title: "Flawless performance",
+    body: "Speed and responsiveness are core to luxury and credibility. Blazing 95+ performance, instant page transitions, and rock-solid reliability come standard.",
   },
   {
     icon: "Target",
-    title: "Ship measurable outcomes",
-    body: "Conversion, uptime, resolution rate — we define the metric before we start, and we report against it every week.",
+    title: "Measurable commercial impact",
+    body: "Conversion rate, average order value, brand prestige — we define key impact targets upfront and align creative execution directly to business growth.",
   },
   {
-    icon: "Sparkles",
-    title: "Motion & craft",
-    body: "Interfaces should feel engineered, not decorated. Springs, easing curves and micro-interactions are part of the spec.",
+    icon: "Cpu",
+    title: "Next-gen technology & AI",
+    body: "We blend high-end design with modern tech stacks and autonomous AI agents to automate real business workflows and outpace competition.",
   },
   {
     icon: "Handshake",
-    title: "Radical ownership",
-    body: "If something breaks at 2am, we're already monitoring it. Your platform's uptime is our problem, not yours.",
+    title: "Radical partnership",
+    body: "We act as your dedicated executive digital team. From concept to launch and continuous optimization, your growth is our obsession.",
   },
   {
     icon: "MessageSquare",
-    title: "Honest counsel",
-    body: "If you don't need a rewrite, we'll tell you. If a hosted platform is the right call, we'll say so. Trust compounds.",
+    title: "Honest strategic counsel",
+    body: "If an off-the-shelf tool solves your problem better than custom code, we will tell you. We champion long-term value and compounded brand equity.",
   },
 ];
 
 const milestones = [
-  { year: "2019", text: "Founded as a two-person digital studio in Riyadh." },
-  { year: "2021", text: "Crossed 50 shipped websites, stores and platforms for growing businesses." },
-  { year: "2023", text: "Launched the AI automation practice — 60+ agents shipped." },
-  { year: "2025", text: "Became a remote-first team across 4 countries with 24/7 SLAs." },
+  { year: "2019", text: "Founded as a boutique creative and digital studio." },
+  { year: "2021", text: "Crossed 50 shipped digital platforms, stores, and brand identities worldwide." },
+  { year: "2023", text: "Launched dedicated AI & automation practice for enterprise clients." },
+  { year: "2025", text: "Expanded global distributed team across key tech and design hubs." },
+  { year: "2026", text: "Delivering worldwide full-service agency solutions for clients across the US, UK, Europe, Middle East, and APAC." },
 ];
 
 export default function AboutPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "About", path: "/about" },
+            ])
+          ),
+        }}
+      />
       <PageHero
         eyebrow="About VOX"
-        title="A studio of engineers who build like operators."
-        subtitle="We're a remote-first IT solutions and digital engineering studio. Small by design, senior by composition — we take on a handful of platforms at a time and own them end to end."
+        title="A world-class digital agency built for ambitious brands."
+        subtitle="We are a global full-service digital agency delivering world-class brand identity, high-converting digital flagships, and intelligent AI automation for industry leaders worldwide."
       />
 
       <section className="py-12 md:py-16">
@@ -72,7 +84,7 @@ export default function AboutPage() {
               <div className="relative overflow-hidden rounded-3xl border border-line-strong">
                 <Image
                   src="/images/programmer-close-up.jpg"
-                  alt="VOX engineer at work on a high-performance platform"
+                  alt="VOX team crafting a high-performance digital flagship"
                   width={1200}
                   height={800}
                   className="aspect-[4/3] w-full object-cover"
@@ -90,22 +102,22 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={0.05}>
               <h2 className="font-display text-3xl font-bold leading-tight tracking-tight text-ink md:text-4xl">
-                Started with one belief: the website is the business.
+                Started with one belief: extraordinary brands need extraordinary digital execution.
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="leading-relaxed text-ink-muted">
-                VOX began in 2019 when a founder and an engineer got tired of agencies that designed pretty
-                screens and handed over slow, fragile code. We decided to build the agency we wished existed —
-                one where performance is contractual, motion is part of the design system, and AI agents
-                genuinely run business operations instead of just appearing in slides.
+                VOX was founded to bridge the gap between high-concept creative agencies and rigid engineering vendors.
+                Too often, brands had to choose between beautiful design that loaded slowly, or fast platforms that lacked
+                soul and personality. We united world-class visual design, elite modern engineering, and cutting-edge AI into
+                a single high-agility agency.
               </p>
             </Reveal>
             <Reveal delay={0.15}>
               <p className="leading-relaxed text-ink-muted">
-                Today we're a remote-first team across four countries, shipping everything from marketing sites
-                to investor portals to autonomous AI workstreams — always as one deployable platform with a
-                written SLA and full ownership handed to you.
+                Today, VOX partners with high-growth startups, established enterprises, and global brands across North America,
+                Europe, the Middle East, and Asia-Pacific — delivering bespoke digital ecosystems that build brand equity and drive
+                revenue.
               </p>
             </Reveal>
             <Reveal delay={0.2}>

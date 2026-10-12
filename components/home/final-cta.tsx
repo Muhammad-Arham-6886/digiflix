@@ -23,8 +23,8 @@ export function FinalCta() {
         </Reveal>
         <Reveal delay={0.16}>
           <p className="max-w-2xl text-base leading-relaxed text-ink-muted md:text-lg">
-            Tell us what you're building. We'll reply within one business day with honest,
-            engineering-first thinking — no scripts, no pressure.
+            Tell us about your vision and goals. We'll reply within one business day with strategic
+            agency insights, creative direction, and a tailored roadmap — no scripts, no pressure.
           </p>
         </Reveal>
         <Reveal delay={0.24}>

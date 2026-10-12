@@ -3,12 +3,12 @@ import { PageHero } from "@/components/shared/page-hero";
 import { Reveal } from "@/components/shared/reveal";
 import { Icon } from "@/components/shared/icon";
 import { BookingForm } from "@/components/forms/booking-form";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Book a Free Consultation",
+  title: "Book a Free Consultation — Worldwide IT Projects",
   description:
-    "Book a free 30-minute consultation with a VOX senior engineer. Discuss your platform, get honest architecture advice and a fixed-price path forward.",
+    "Book a free 30-minute consultation with a VOX senior engineer. Discuss your platform, get honest architecture advice and a fixed-price path forward — serving clients globally.",
   path: "/book-consultation",
 });
 
@@ -38,6 +38,17 @@ const expectations = [
 export default function BookConsultationPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "Book Consultation", path: "/book-consultation" },
+            ])
+          ),
+        }}
+      />
       <PageHero
         eyebrow="Book a Consultation"
         title="30 minutes with an engineer who ships."

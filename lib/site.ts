@@ -7,10 +7,10 @@ const contactTo: string[] = process.env.CONTACT_TO
 export const siteConfig = {
   name: "VOX Digital Agency",
   legalName: "VOX Digital Agency",
-  tagline: "Enterprise IT Solutions & Digital Engineering",
+  tagline: "Worldwide Full-Service Digital Agency",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://voxdigitalagency.co",
   description:
-    "VOX Digital Agency delivers full IT solutions — websites, web applications, e-commerce, AI automation and cloud infrastructure. Technical SEO, 24/7 SLAs and a Lighthouse guarantee.",
+    "VOX Digital Agency is a global full-service digital agency crafting bespoke websites, high-converting e-commerce, custom web applications, and intelligent AI automation for ambitious brands worldwide.",
   email: "info@voxdigitalagency.co",
   emailFrom: process.env.EMAIL_FROM ?? "VOX Digital Agency <onboarding@resend.dev>",
   contactTo,
@@ -25,7 +25,7 @@ export const siteConfig = {
     instagram: "https://instagram.com/voxdigitalagency",
     whatsapp: "https://wa.me/971551506155",
   },
-  address: "Remote Worldwide",
+  address: "Worldwide Remote Studio — Serving Clients Globally",
 } as const;
 
 export type NavItem = {

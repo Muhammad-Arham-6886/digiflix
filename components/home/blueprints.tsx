@@ -50,9 +50,9 @@ export function Blueprints() {
     <section className="relative py-20 md:py-28" aria-label="Flagship blueprints">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Flagship Blueprints"
-          title="Patterns we've proven in production"
-          subtitle="Three blueprints we re-use and refine for every client — each one battle-tested, measurable and repeatable."
+          eyebrow="Featured Case Studies"
+          title="Proven digital transformations"
+          subtitle="Explore how we combine bespoke design, modern technology, and conversion strategy to elevate market-leading brands."
         />
 
         <Stagger className="grid gap-6 lg:grid-cols-3">

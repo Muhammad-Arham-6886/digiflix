@@ -4,18 +4,34 @@ import { Reveal } from "@/components/shared/reveal";
 import { Icon } from "@/components/shared/icon";
 import { ButtonLink } from "@/components/ui/button";
 import { FaqExplorer } from "@/components/faqs/faq-explorer";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, faqJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
+import { faqItems } from "@/lib/faq";
 
 export const metadata: Metadata = buildMetadata({
-  title: "FAQs",
-  description: `Answers to the most common questions about ${siteConfig.name} — services, process, pricing, support, maintenance, AI solutions and more.`,
+  title: "Frequently Asked Questions",
+  description: `Answers to the most common questions about ${siteConfig.name} — worldwide services, development process, pricing, support, maintenance, and AI solutions.`,
   path: "/faqs",
 });
 
 export default function FaqsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqItems)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "FAQs", path: "/faqs" },
+            ])
+          ),
+        }}
+      />
       <PageHero
         eyebrow="FAQs"
         title="Answers, before you ask."

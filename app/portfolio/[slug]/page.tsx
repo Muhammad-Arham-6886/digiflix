@@ -33,6 +33,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   });
 }
 
+const serviceSlugMap: Record<string, string> = {
+  "Website Development": "/services/website-development",
+  "WordPress Development": "/services/wordpress-development",
+  "Shopify Development": "/services/shopify-development",
+  "WooCommerce Development": "/services/woocommerce-development",
+  "Figma to WordPress": "/services/figma-to-wordpress",
+  "Webflow Website Development": "/services/webflow-development",
+  "Custom Web Applications": "/services/custom-web-applications",
+  "AI Agents & Business Automation": "/services/ai-agents-business-automation",
+  "Technical SEO & Performance": "/services/seo-optimization",
+  "Google Business Profile": "/services/google-business-profile",
+  "UI/UX Design": "/services/ui-ux-design",
+  "UI/UX Design & Branding": "/services/ui-ux-design",
+  "Logo & Brand Design": "/services/logo-brand-design",
+};
+
 export default async function CaseStudyPage({ params }: PageProps) {
   const { slug } = await params;
   const study = getCaseStudy(slug);
@@ -51,11 +67,20 @@ export default async function CaseStudyPage({ params }: PageProps) {
               <div className="max-w-2xl">
                 <div className="mb-5 flex flex-wrap items-center gap-3">
                   <Badge tone="primary">{study.industry}</Badge>
-                  {study.services.map((service) => (
-                    <Badge key={service} tone="accent">
-                      {service}
-                    </Badge>
-                  ))}
+                  {study.services.map((service) => {
+                    const href = serviceSlugMap[service];
+                    return href ? (
+                      <Link key={service} href={href} className="transition-opacity hover:opacity-80">
+                        <Badge tone="accent">
+                          {service} ↗
+                        </Badge>
+                      </Link>
+                    ) : (
+                      <Badge key={service} tone="accent">
+                        {service}
+                      </Badge>
+                    );
+                  })}
                 </div>
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent-300">{study.client}</p>
                 <h1 className="mt-3 font-display text-4xl font-bold leading-[1.06] tracking-tight text-ink md:text-5xl">

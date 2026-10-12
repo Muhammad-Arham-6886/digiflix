@@ -5,39 +5,39 @@ import { Stagger, StaggerItem } from "@/components/shared/reveal";
 const reasons = [
   {
     num: "01",
-    icon: "Gauge",
-    title: "Lighthouse guarantee",
-    body: "A 95+ score is written into the contract — if we miss it, we keep fixing until we don't.",
+    icon: "Palette",
+    title: "Creative & Design Mastery",
+    body: "Bespoke visual identities, fluid motion UI and interfaces crafted to command attention and elevate brand authority.",
   },
   {
     num: "02",
-    icon: "Sparkles",
-    title: "Motion & physics UI",
-    body: "Framer Motion springs, layout transitions and micro-interactions that make platforms feel alive.",
+    icon: "Gauge",
+    title: "High-Performance Engineering",
+    body: "Modern Next.js, Shopify and headless architectures engineered for instant speeds and flawless mobile responsiveness.",
   },
   {
     num: "03",
-    icon: "Cpu",
-    title: "Full-stack + AI backend",
-    body: "Frontend, APIs, databases and AI agents in one deployable system — no separate backend to babysit.",
+    icon: "Bot",
+    title: "Intelligent AI & Automation",
+    body: "Autonomous AI agents, smart workflows and custom integrations that give your operations a decisive competitive edge.",
   },
   {
     num: "04",
-    icon: "ShieldCheck",
-    title: "IP ownership & security",
-    body: "You own the code, the infrastructure and the domain. We engineer for auditability from day one.",
+    icon: "TrendingUp",
+    title: "Measurable Growth & ROI",
+    body: "Every page, conversion funnel and customer touchpoint is engineered to turn casual traffic into qualified revenue.",
   },
   {
     num: "05",
-    icon: "SearchCheck",
-    title: "Technical SEO",
-    body: "Structured data, crawl architecture and Core Web Vitals — search visibility engineered, not hoped for.",
+    icon: "Globe",
+    title: "Global Delivery & 24/7 Care",
+    body: "Remote-first agency teams serving clients worldwide with proactive monitoring, rapid turnaround and on-call care.",
   },
   {
     num: "06",
-    icon: "Clock",
-    title: "24/7 SLAs",
-    body: "Monitoring, alerting and on-call response so a 2am release never becomes a 2am outage.",
+    icon: "ShieldCheck",
+    title: "Full Brand & IP Ownership",
+    body: "You own 100% of your source code, design systems and digital assets from day one — zero vendor lock-in.",
   },
 ];
 
@@ -46,9 +46,9 @@ export function WhyPartner() {
     <section className="relative border-y border-line bg-surface/40 py-20 md:py-28" aria-label="Why partner with VOX">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Why Partner"
-          title="Engineering partners, not vendors"
-          subtitle="Six reasons teams keep choosing VOX — and keep coming back for the next platform."
+          eyebrow="The Agency Advantage"
+          title="Strategic design meets world-class technology"
+          subtitle="Six reasons high-growth companies and global brands choose VOX as their primary digital agency partner."
         />
         <Stagger className="grid gap-px overflow-hidden rounded-3xl border border-line-strong bg-line-strong sm:grid-cols-2 lg:grid-cols-3">
           {reasons.map((reason) => (

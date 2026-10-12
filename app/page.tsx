@@ -8,12 +8,12 @@ import { WhyPartner } from "@/components/home/why-partner";
 import { Blueprints } from "@/components/home/blueprints";
 import { LaunchBanner } from "@/components/home/launch-banner";
 import { FinalCta } from "@/components/home/final-cta";
-import { buildMetadata, organizationJsonLd } from "@/lib/seo";
+import { buildMetadata, organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "VOX Digital Agency — IT Solutions & Digital Engineering",
+  title: "VOX Digital Agency — Worldwide IT Solutions & Digital Engineering",
   description:
-    "End-to-end IT solutions — web platforms, e-commerce, AI automation and cloud infrastructure from one senior team. 95+ Lighthouse guarantee, technical SEO and 24/7 SLAs.",
+    "End-to-end IT solutions delivered worldwide — high-performance websites, e-commerce, custom web applications, AI automation and cloud infrastructure. 95+ Lighthouse guarantee, technical SEO and 24/7 SLAs.",
   path: "/",
 });
 
@@ -23,6 +23,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd()) }}
       />
       <Hero />
       <TrustMarquee />

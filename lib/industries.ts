@@ -5,6 +5,8 @@ export type Industry = {
   description: string;
   bullets: string[];
   image: string;
+  serviceHref: string;
+  serviceName: string;
 };
 
 export const industries: Industry[] = [
@@ -15,7 +17,9 @@ export const industries: Industry[] = [
     description:
       "Storefronts for brands scaling past template limitations — engineered to convert on every device.",
     bullets: ["Custom storefronts", "CRO & checkout optimization", "Replatforming & migration"],
-    image: "/images/stock/18705.jpg",
+    image: "/images/stock/2177.jpg",
+    serviceHref: "/services/shopify-development",
+    serviceName: "Shopify Development",
   },
   {
     slug: "saas-technology",
@@ -24,7 +28,9 @@ export const industries: Industry[] = [
     description:
       "Product platforms, dashboards and API businesses that need speed, security and architecture that scales with revenue.",
     bullets: ["Multi-tenant SaaS", "Admin & analytics dashboards", "Billing & integrations"],
-    image: "/images/programmer-close-up.jpg",
+    image: "/images/stock/77678.jpg",
+    serviceHref: "/services/custom-web-applications",
+    serviceName: "Custom Web Applications",
   },
   {
     slug: "fintech",
@@ -34,6 +40,8 @@ export const industries: Industry[] = [
       "Investor portals and financial platforms where audit trails, RBAC and uptime are non-negotiable requirements.",
     bullets: ["Investor & LP portals", "Compliance-ready RBAC", "Real-time reporting"],
     image: "/images/stock/2817.jpg",
+    serviceHref: "/services/custom-web-applications",
+    serviceName: "Web Applications & Portals",
   },
   {
     slug: "healthcare",
@@ -43,6 +51,8 @@ export const industries: Industry[] = [
       "Patient platforms, booking flows and AI triage that improve access while respecting strict privacy obligations.",
     bullets: ["Patient portals & booking", "AI intake & triage agents", "HIPAA-aligned architecture"],
     image: "/images/stock/77678.jpg",
+    serviceHref: "/services/ai-agents-business-automation",
+    serviceName: "AI Automation & Booking",
   },
   {
     slug: "real-estate",
@@ -52,6 +62,8 @@ export const industries: Industry[] = [
       "Property portals and campaign engines with instant search and programmatic SEO that put listings in front of buyers.",
     bullets: ["Property portals", "Programmatic SEO", "Instant search & filtering"],
     image: "/images/stock/165597.jpg",
+    serviceHref: "/services/website-development",
+    serviceName: "Website Development",
   },
   {
     slug: "manufacturing",
@@ -60,7 +72,9 @@ export const industries: Industry[] = [
     description:
       "Operations dashboards and IoT data pipelines that turn sensor noise into visibility and fewer minutes of downtime.",
     bullets: ["Real-time ops dashboards", "IoT & sensor pipelines", "Anomaly alerting"],
-    image: "/images/stock/42950.jpg",
+    image: "/images/stock/2180.jpg",
+    serviceHref: "/services/woocommerce-development",
+    serviceName: "B2B E-commerce & Portals",
   },
   {
     slug: "media-publishing",
@@ -70,6 +84,8 @@ export const industries: Industry[] = [
       "Publisher platforms with edge rendering, ad systems and Core Web Vitals budgets that keep readers — and revenue — engaged.",
     bullets: ["Edge-rendered publishing", "Ad system architecture", "Performance budgets"],
     image: "/images/stock/94833.jpg",
+    serviceHref: "/services/seo-optimization",
+    serviceName: "Technical SEO & Speed",
   },
   {
     slug: "logistics",
@@ -79,6 +95,8 @@ export const industries: Industry[] = [
       "Tracking, claims and customer-experience automation that keep shipments — and questions — moving without friction.",
     bullets: ["Tracking & visibility platforms", "CX automation agents", "Systems integration"],
     image: "/images/stock/126204.jpg",
+    serviceHref: "/services/ai-agents-business-automation",
+    serviceName: "AI Agents & Automation",
   },
 ];
 

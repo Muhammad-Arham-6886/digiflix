@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { PageHero } from "@/components/shared/page-hero";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Reveal, Stagger, StaggerItem } from "@/components/shared/reveal";
@@ -7,18 +8,29 @@ import { Icon } from "@/components/shared/icon";
 import { ButtonLink } from "@/components/ui/button";
 import { FinalCta } from "@/components/home/final-cta";
 import { industries, industriesIntro } from "@/lib/industries";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Industries We Serve",
+  title: "Industries We Serve — Worldwide Digital Solutions",
   description:
-    "VOX engineers platforms for e-commerce, SaaS, fintech, healthcare, real estate, manufacturing, media and logistics — with engineering rigor tuned to each industry.",
+    "VOX engineers high-performance platforms worldwide for e-commerce, SaaS, fintech, healthcare, real estate, manufacturing, media and logistics.",
   path: "/industries",
 });
 
 export default function IndustriesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "Industries", path: "/industries" },
+            ])
+          ),
+        }}
+      />
       <PageHero eyebrow={industriesIntro.title} title={industriesIntro.title} subtitle={industriesIntro.subtitle} />
 
       <section className="pb-20 md:pb-28">
@@ -51,6 +63,15 @@ export default function IndustriesPage() {
                           {bullet}
                         </span>
                       ))}
+                    </div>
+                    <div className="mt-6 pt-4 border-t border-line/60">
+                      <Link
+                        href={industry.serviceHref}
+                        className="inline-flex items-center gap-2 text-sm font-medium text-primary-300 transition-colors hover:text-primary-200"
+                      >
+                        Explore {industry.serviceName}
+                        <Icon name="ArrowRight" className="h-4 w-4" />
+                      </Link>
                     </div>
                   </div>
                 </div>

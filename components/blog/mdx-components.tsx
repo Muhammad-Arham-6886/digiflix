@@ -12,9 +12,30 @@ export const mdxComponents: MDXComponents = {
     <h3 className="mt-8 mb-3 font-display text-xl font-semibold tracking-tight text-ink" {...props} />
   ),
   p: (props) => <p className="my-5 leading-relaxed text-ink-muted" {...props} />,
-  a: (props) => (
-    <a className="font-medium text-primary-300 underline-offset-4 hover:underline" {...props} />
-  ),
+  a: ({ href, children, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
+    if (href && (href.startsWith("/") || href.startsWith("#"))) {
+      return (
+        <Link
+          href={href}
+          className="font-medium text-primary-300 underline-offset-4 hover:underline"
+          {...props}
+        >
+          {children}
+        </Link>
+      );
+    }
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-medium text-primary-300 underline-offset-4 hover:underline"
+        {...props}
+      >
+        {children}
+      </a>
+    );
+  },
   ul: (props) => <ul className="my-5 list-disc space-y-2 pl-6 text-ink-muted" {...props} />,
   ol: (props) => <ol className="my-5 list-decimal space-y-2 pl-6 text-ink-muted" {...props} />,
   li: (props) => <li className="leading-relaxed" {...props} />,

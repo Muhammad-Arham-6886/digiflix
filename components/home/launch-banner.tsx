@@ -23,8 +23,8 @@ export function LaunchBanner() {
                   Be our next <span className="text-gradient-gold">featured case study</span>
                 </h2>
                 <p className="mt-4 text-ink-muted md:text-lg">
-                  We partner with 2–3 ambitious teams per quarter on flagship builds — with priority
-                  engineering, below-market early pricing and a guaranteed spotlight.
+                  We partner with a select group of visionary brands each quarter on flagship digital transformations —
+                  offering dedicated senior agency talent, bespoke creative craft, and an impactful case study spotlight.
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-4">

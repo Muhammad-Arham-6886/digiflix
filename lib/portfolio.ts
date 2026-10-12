@@ -38,7 +38,7 @@ export const caseStudies: CaseStudy[] = [
       "Juniper & Pine sold handmade and curated fashion out of a single storefront. Online, the catalog was a photo gallery with a 'call to order' button — and they were losing weekend sales they never knew about.",
     approach:
       "We built a clean custom Shopify theme around their brand, with an editorial product storytelling layout and a simple gift-set builder. Mobile-first, because that's exactly where their customers shopped.",
-    image: "/images/stock/18705.jpg",
+    image: "/images/stock/2151272922.jpg",
     metrics: [
       { value: "+38%", label: "Online sales, first quarter" },
       { value: "1.9s", label: "Largest Contentful Paint" },
@@ -120,7 +120,7 @@ export const caseStudies: CaseStudy[] = [
       "Cedar & Stone's work was beautiful, but their website was a static brochure they couldn't update, and every inquiry arrived by guessing the email address.",
     approach:
       "We designed a gallery-driven Webflow site with CMS collections for projects, smooth scroll interactions and an embedded booking link. The studio now updates their own portfolio in minutes.",
-    image: "/images/stock/8522.jpg",
+    image: "/images/stock/2151320690.jpg",
     metrics: [
       { value: "3x", label: "Design inquiries" },
       { value: "2 wks", label: "To launch" },
@@ -161,7 +161,7 @@ export const caseStudies: CaseStudy[] = [
       "Summit took orders by phone and email, quoting from a 20-page PDF catalog. Customers wanted to browse specs and order after hours.",
     approach:
       "We stood up a WooCommerce catalog with tiered pricing for trade customers, fast product search and a quote-request flow that drops straight into their inbox.",
-    image: "/images/stock/42950.jpg",
+    image: "/images/stock/133967.jpg",
     metrics: [
       { value: "+52%", label: "Online B2B orders" },
       { value: "120+", label: "Products live" },
