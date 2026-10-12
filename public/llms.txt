@@ -1,0 +1,42 @@
+# VOX Digital Agency
+
+> Worldwide Full-Service Digital Agency delivering bespoke brand design, high-performance web engineering, conversion-first e-commerce, and intelligent AI automation for ambitious brands globally.
+
+VOX Digital Agency operates globally, delivering category-defining digital flagships for startups, scaling businesses, and established enterprises across North America, the United Kingdom, Europe, the Middle East, and Asia-Pacific.
+
+## Core Services
+
+- [Website Development](https://voxdigitalagency.co/services/website-development): High-performance marketing websites, corporate platforms, and content hubs engineered with Next.js, React, TypeScript, and Tailwind CSS with guaranteed 95+ Lighthouse performance.
+- [WordPress Development](https://voxdigitalagency.co/services/wordpress-development): Modern enterprise WordPress builds with custom Gutenberg block themes, headless front-ends, and hardened plugin architecture.
+- [Shopify Development](https://voxdigitalagency.co/services/shopify-development): Shopify Plus storefronts, Hydrogen/Remix headless commerce, custom themes, and conversion-engineered checkout flows.
+- [WooCommerce Development](https://voxdigitalagency.co/services/woocommerce-development): Scalable WooCommerce stores optimized for high-volume catalogs, custom payment gateways, and headless front-ends.
+- [Webflow Website Development](https://voxdigitalagency.co/services/webflow-development): Launch-ready Webflow sites with clean CMS collections, responsive structure, and custom interactions.
+- [Figma to WordPress](https://voxdigitalagency.co/services/figma-to-wordpress): Pixel-perfect conversion of Figma designs into clean, maintainable, editor-friendly WordPress block themes.
+- [Custom Web Applications](https://voxdigitalagency.co/services/custom-web-applications): Full-stack SaaS platforms, portals, dashboards, and internal tooling on Next.js, Node.js, Express, and PostgreSQL.
+- [AI Agents & Business Automation](https://voxdigitalagency.co/services/ai-agents-business-automation): Autonomous AI agents, workflow automation, and RAG pipelines integrated into Slack, CRM, and internal databases.
+- [Technical SEO & Performance](https://voxdigitalagency.co/services/seo-optimization): Core Web Vitals optimization, Schema.org structured data, crawl architecture, and international SEO.
+- [Google Business Profile Management](https://voxdigitalagency.co/services/google-business-profile): Local SEO, Google Maps pack optimization, review generation, citations, and verified profile management.
+- [UI/UX Design & Branding](https://voxdigitalagency.co/services/ui-ux-design): Design systems, Figma component libraries, motion design, UX research, and responsive web/mobile user interfaces.
+- [Logo & Brand Design](https://voxdigitalagency.co/services/logo-brand-design): Distinctive logo marks, color theory, typography systems, brand guidelines, and complete visual identity suites.
+
+## Pricing Packages
+
+- [Launch Package ($499)](https://voxdigitalagency.co/pricing): For startups and small businesses establishing their online presence. Up to 5 pages, modern responsive design, basic SEO, contact forms, speed optimization, SSL security, Google Analytics integration, and 14 days of post-launch support.
+- [Growth Package ($1,199)](https://voxdigitalagency.co/pricing): Most popular package for scaling companies. Up to 15 pages, custom UI/UX design, CMS integration & blog setup, technical SEO & schema markup, performance optimization, basic AI automation & booking forms, Google Analytics conversion tracking, and 30 days of post-launch support.
+- [Enterprise Package (Custom Quote)](https://voxdigitalagency.co/pricing): Bespoke digital solutions for established organizations with complex workflows, custom API integrations, enterprise SLAs, dedicated project management, AI agents, and ongoing priority support.
+
+## Key Pages & Information
+
+- [Portfolio & Case Studies](https://voxdigitalagency.co/portfolio): Proven digital transformations across fashion, healthcare, real estate, manufacturing, and local services.
+- [Industries We Serve](https://voxdigitalagency.co/industries): Tailored solutions for E-commerce & Retail, SaaS & Tech, Fintech, Healthcare, Real Estate, and Manufacturing.
+- [About Us](https://voxdigitalagency.co/about): The VOX story, values, and worldwide remote delivery model.
+- [Process](https://voxdigitalagency.co/process): Discovery, architecture, sprint-based delivery, quality assurance, and ongoing optimization.
+- [Frequently Asked Questions](https://voxdigitalagency.co/faqs): Answers regarding timelines, technologies, pricing, and project governance.
+- [Book a Consultation](https://voxdigitalagency.co/book-consultation): Schedule a 30-minute discovery consultation with senior leadership.
+- [Contact Us](https://voxdigitalagency.co/contact): Submit project briefs and general inquiries.
+
+## Contact & Location
+
+- Official Website: https://voxdigitalagency.co
+- Email: hello@voxdigitalagency.co
+- Service Model: Worldwide Remote Studio — Serving Clients Globally
