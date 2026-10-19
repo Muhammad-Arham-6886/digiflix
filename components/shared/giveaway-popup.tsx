@@ -107,12 +107,12 @@ export function GiveawayPopup() {
             </button>
 
             {/* Badge & Urgency Pill */}
-            <div className="flex flex-wrap items-center gap-2 pr-8 mb-4">
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-accent-400/30 bg-accent-500/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent-300">
-                <Icon name="Sparkles" className="h-3.5 w-3.5" />
+            <div className="flex items-center gap-2 pr-8 mb-4 flex-nowrap">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-accent-400/30 bg-accent-500/15 px-2.5 sm:px-3 py-1 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-accent-300 whitespace-nowrap shrink-0">
+                <Icon name="Sparkles" className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                 Special Agency Giveaway
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-xs font-medium text-emerald-400">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2 sm:px-2.5 py-1 text-[11px] sm:text-xs font-medium text-emerald-400 whitespace-nowrap shrink-0">
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
@@ -168,15 +168,16 @@ export function GiveawayPopup() {
                 <Icon name="ArrowRight" className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </button>
 
-              <div className="flex items-center justify-between px-2 pt-1">
+              <div className="flex items-center justify-center gap-2.5 px-2 pt-1 text-[11px] sm:text-xs text-ink-faint whitespace-nowrap flex-nowrap">
                 <button
                   type="button"
                   onClick={handleDismiss}
-                  className="text-xs text-ink-faint hover:text-ink transition-colors cursor-pointer"
+                  className="hover:text-ink transition-colors cursor-pointer"
                 >
                   Remind me in 6 hours
                 </button>
-                <span className="text-[11px] text-ink-faint">
+                <span className="text-ink-faint/40">•</span>
+                <span>
                   *Terms & conditions apply
                 </span>
               </div>
