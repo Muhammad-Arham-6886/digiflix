@@ -8,6 +8,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollProgress, PageTransition } from "@/components/layout/page-transition";
 import { WhatsAppButton } from "@/components/layout/whatsapp-button";
+import { GiveawayPopup } from "@/components/shared/giveaway-popup";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,16 +32,27 @@ export const metadata: Metadata = {
   keywords: [
     "worldwide IT solutions",
     "global digital agency",
+    "best search engine optimization agency",
+    "enterprise seo agency",
+    "search engine optimization service",
+    "on-page seo services",
+    "best website design company",
+    "top rated website design",
     "web development agency",
     "custom web applications",
     "enterprise WordPress development",
+    "wordpress seo agency",
     "Shopify Plus agency",
     "WooCommerce development",
     "AI agents & automation",
-    "cloud engineering",
     "technical SEO agency",
+    "technical seo audit",
     "Core Web Vitals optimization",
-    "UI/UX design systems",
+    "page speed seo",
+    "brand identity design services",
+    "white label digital marketing",
+    "b2b seo consultant",
+    "google map pack local seo",
   ],
   authors: [{ name: siteConfig.legalName }],
   creator: siteConfig.legalName,
@@ -116,6 +128,7 @@ export default function RootLayout({
         <PageTransition>{children}</PageTransition>
         <Footer />
         <WhatsAppButton />
+        <GiveawayPopup />
       </body>
     </html>
   );

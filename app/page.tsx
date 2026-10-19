@@ -13,8 +13,22 @@ import { buildMetadata, organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "VOX Digital Agency — Worldwide IT Solutions & Digital Engineering",
   description:
-    "End-to-end IT solutions delivered worldwide — high-performance websites, e-commerce, custom web applications, AI automation and cloud infrastructure. 95+ Lighthouse guarantee, technical SEO and 24/7 SLAs.",
+    "End-to-end IT solutions delivered worldwide — top-rated website design, on-page SEO services, custom web applications, enterprise SEO, and AI automation with a 95+ Lighthouse guarantee.",
   path: "/",
+  keywords: [
+    "best search engine optimization agency",
+    "best website design company",
+    "top rated website design",
+    "on-page seo services",
+    "enterprise seo agency",
+    "search engine optimization service",
+    "web development agency",
+    "custom web applications",
+    "wordpress seo agency",
+    "b2b seo consultant",
+    "technical seo audit",
+    "white label digital marketing services",
+  ],
 });
 
 export default function Home() {

@@ -41,14 +41,14 @@ export const services: Service[] = [
     category: "Web Development",
     icon: "Globe",
     image: "/images/stock/2150038838.jpg",
-    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    tags: ["Best Website Design", "Top Rated Website Design", "Website Redesign SEO", "Mobile Optimization", "Next.js", "React", "TypeScript"],
     features: [
-      "Server-rendered builds with streaming",
-      "95+ Lighthouse performance on every template",
+      "Server-rendered builds with streaming & mobile optimization",
+      "95+ Lighthouse PageSpeed performance on every template",
       "Motion-driven UI with Framer Motion physics",
       "Headless CMS integration (Sanity, Contentful, Strapi)",
       "Internationalization and multi-region rollouts",
-      "Accessible, semantic, SEO-ready markup",
+      "Accessible, semantic, website redesign SEO-ready markup",
     ],
     deliverables: ["Source code with CI/CD", "Technical documentation", "Analytics + monitoring setup", "30-day post-launch care"],
     faq: [
@@ -61,9 +61,9 @@ export const services: Service[] = [
         a: "Most marketing sites launch in 4–6 weeks. Larger platforms and content migrations typically land in 8–12 weeks depending on scope and integrations.",
       },
     ],
-    metaTitle: "Website Development | VOX Digital Agency",
+    metaTitle: "Website Development & Web Design Agency | VOX Digital Agency",
     metaDescription:
-      "High-performance websites built with Next.js, React and TypeScript. 95+ Lighthouse scores, motion UI and technical SEO baked in.",
+      "Top rated website design and development company. High-performance Next.js builds, mobile optimization, and website redesign SEO with a 95+ PageSpeed SLA.",
   },
   {
     slug: "wordpress-development",
@@ -75,12 +75,12 @@ export const services: Service[] = [
     category: "Web Development",
     icon: "FileCode",
     image: "/images/stock/115440.jpg",
-    tags: ["WordPress", "Headless", "PHP", "WPGraphQL", "React"],
+    tags: ["WordPress SEO Agency", "SEO for WordPress", "Headless WordPress", "Custom Themes", "WordPress Optimization", "PHP", "WPGraphQL"],
     features: [
       "Custom Gutenberg blocks and block themes",
       "Headless WordPress + Next.js front-ends",
       "WPGraphQL and REST API architecture",
-      "Plugin audits, hardening and security fixes",
+      "Plugin audits, hardening, and WordPress SEO fixes",
       "Content migrations and SEO preservation",
       "Multilingual and editorial workflows",
     ],
@@ -90,10 +90,14 @@ export const services: Service[] = [
         q: "Headless or traditional WordPress?",
         a: "If your team needs visual editing and your marketing site is content-heavy, we recommend headless. If you rely on a dense plugin ecosystem, a well-architected classic build can still hit excellent scores.",
       },
+      {
+        q: "Is WordPress SEO friendly out of the box?",
+        a: "WordPress has strong foundations, but heavy themes and bloated plugins frequently hurt PageSpeed and Core Web Vitals. We optimize clean semantic markup, headless caching, and schema markup to maximize search visibility.",
+      },
     ],
-    metaTitle: "WordPress Development | VOX Digital Agency",
+    metaTitle: "Enterprise WordPress Development & SEO Agency | VOX Digital Agency",
     metaDescription:
-      "Enterprise WordPress builds — custom themes, headless front-ends, hardened security and performance at scale.",
+      "Enterprise WordPress development and WordPress SEO agency. Custom themes, headless front-ends, speed optimization, and migration-safe SEO.",
   },
   {
     slug: "shopify-development",
@@ -293,25 +297,38 @@ export const services: Service[] = [
     category: "SEO & Performance",
     icon: "Gauge",
     image: "/images/stock/282388.jpg",
-    tags: ["Technical SEO", "Core Web Vitals", "Schema.org", "Sitemaps", "Analytics"],
-    features: [
-      "Lighthouse 95+ guarantee in the contract",
-      "Schema.org, JSON-LD and rich result strategy",
-      "Crawl, index and canonical architecture",
-      "Core Web Vitals and image/script budgets",
-      "Migration-safe redirect and URL mapping",
-      "Search console, analytics and reporting setup",
+    tags: [
+      "On-Page SEO Services",
+      "Enterprise SEO Agency",
+      "Technical SEO Audit",
+      "B2B SEO Consultant",
+      "Core Web Vitals",
+      "Internal Linking SEO",
+      "Page Speed SEO",
+      "Link Building Services",
     ],
-    deliverables: ["SEO technical audit", "Migration runbook", "Structured data markup", "Performance budget + monitoring"],
+    features: [
+      "On-page SEO services and content architecture",
+      "Technical SEO audit checklist & crawl diagnostics",
+      "Internal linking SEO & authority flow mapping",
+      "Lighthouse 95+ PageSpeed & Core Web Vitals guarantee",
+      "Schema.org, JSON-LD and rich snippets engineering",
+      "Website migration checklist, redirect mapping & link retention",
+    ],
+    deliverables: ["SEO technical audit checklist", "On-page optimization roadmap", "Structured data markup", "Performance budget + monitoring"],
     faq: [
       {
         q: "Do you guarantee rankings?",
-        a: "Nobody can honestly guarantee rankings. We guarantee the things that are in our control — a Lighthouse score SLA, clean crawl architecture and structured data — which is what compounding SEO performance is built on.",
+        a: "Nobody can honestly guarantee rankings. We guarantee the factors that control search visibility — clean crawl architecture, structured data, internal linking, and a Lighthouse PageSpeed SLA — which compounds ranking authority.",
+      },
+      {
+        q: "What is included in an on-page and technical SEO audit?",
+        a: "We inspect your rendering pipeline, index status, canonical tags, internal linking hierarchy, duplicate content, mobile optimization, and Core Web Vitals to deliver a prioritized remediation roadmap.",
       },
     ],
-    metaTitle: "Technical SEO & Performance | VOX Digital Agency",
+    metaTitle: "On-Page & Technical SEO Services Agency | VOX Digital Agency",
     metaDescription:
-      "Technical SEO, Core Web Vitals and structured data with a written Lighthouse guarantee. Rank-worthy engineering.",
+      "Enterprise SEO agency delivering on-page SEO services, technical audits, internal linking architecture, and PageSpeed optimization with a written SLA.",
   },
   {
     slug: "google-business-profile",
@@ -319,18 +336,18 @@ export const services: Service[] = [
     short:
       "Local visibility on autopilot — optimized Google Business Profiles, review strategy, posts and local SEO foundations.",
     description:
-      "Your Google Business Profile is the first thing local customers see. We set up, verify and optimize your profile end to end — categories, service areas, photos, posts and review flows — then layer on citations and local landing pages so you rank in the map pack and convert searchers into customers.",
+      "Your Google Business Profile is the first thing local customers see. We set up, verify and optimize your profile end to end — categories, service areas, photos, posts and review flows — then layer on local citation building and landing pages so you rank in the Google map pack and convert searchers into customers.",
     category: "SEO & Performance",
     icon: "MapPin",
     image: "/images/google-business-profile.jpg",
-    tags: ["Google Business Profile", "Local SEO", "Reviews", "Google Maps", "Citations"],
+    tags: ["Google Business Profile", "Google Map Pack", "Local Pack SEO", "Local Citation Building", "Local SEO Campaign", "Multi-Location SEO"],
     features: [
       "Profile setup, verification and full optimization",
-      "Category, service area and attribute strategy",
+      "Google map pack and local pack SEO optimization",
+      "Local citation building and NAP consistency",
       "Review generation flows and response management",
       "Posts, photos and regular profile updates",
-      "Local citations and NAP consistency",
-      "Local landing pages and map-pack SEO",
+      "Local landing pages and multi-location SEO strategy",
     ],
     deliverables: ["Optimized Google Business Profile", "Review flow + response playbook", "Citation audit and build-out", "Local SEO reporting"],
     faq: [
@@ -343,9 +360,9 @@ export const services: Service[] = [
         a: "Yes. We set up review generation that follows Google's guidelines — nudging happy customers at the right moment and handling responses professionally, which compounds your local ranking.",
       },
     ],
-    metaTitle: "Google Business Profile Management | VOX Digital Agency",
+    metaTitle: "Google Business Profile & Local Map Pack SEO | VOX Digital Agency",
     metaDescription:
-      "Optimized Google Business Profiles, review strategy and local SEO — rank in the map pack and turn local searches into customers.",
+      "Google Business Profile optimization and local SEO services. Dominate the Google map pack, build local citations, and convert local search traffic into clients.",
   },
   {
     slug: "ui-ux-design",
@@ -357,7 +374,7 @@ export const services: Service[] = [
     category: "Design & Branding",
     icon: "Palette",
     image: "/images/ui-ux-design.jpg",
-    tags: ["Figma", "Design Systems", "Motion Design", "UX Research", "Prototyping"],
+    tags: ["UI/UX Design", "Brand Identity Services", "Design Systems", "Figma", "Digital Branding Services", "Prototyping"],
     features: [
       "UX research, user flows and wireframes",
       "Design systems with tokenized foundations",
@@ -373,9 +390,9 @@ export const services: Service[] = [
         a: "Both, usually on the same engagement. Design stays in the same room as engineering, so what ships matches what was approved — down to the easing curve.",
       },
     ],
-    metaTitle: "UI/UX Design & Branding | VOX Digital Agency",
+    metaTitle: "UI/UX Design Systems & Digital Branding | VOX Digital Agency",
     metaDescription:
-      "Motion-driven design systems and product UI engineered for production — researched, designed and built by one team.",
+      "Motion-driven design systems, product UI, and digital branding services engineered for production — researched, designed and built by one team.",
   },
   {
     slug: "logo-brand-design",
@@ -387,14 +404,14 @@ export const services: Service[] = [
     category: "Design & Branding",
     icon: "Gem",
     image: "/images/logo-brand-design.jpg",
-    tags: ["Logo Design", "Brand Identity", "Typography", "Brand Guidelines", "Art Direction"],
+    tags: ["Brand Identity Design Services", "Brand Identity Services", "Digital Branding Services", "Business Branding Services", "Logo Design"],
     features: [
       "Logo concepts, iterations and final marks",
-      "Brand identity: color, typography and texture",
-      "Brand guidelines and usage rules",
+      "Brand identity design services: color, typography and texture",
+      "Brand guidelines and business branding usage rules",
       "Stationery, social and presentation templates",
       "Favicon and app-icon adaptation",
-      "Art direction that carries into UI and marketing",
+      "Art direction that carries into UI and digital marketing",
     ],
     deliverables: ["Final logo suite", "Brand guidelines", "Source files (Figma, vector)", "Templates: stationery + social"],
     faq: [
@@ -407,9 +424,9 @@ export const services: Service[] = [
         a: "Often, yes. A defined identity makes the UI phase faster and more consistent. We can run brand design as a standalone engagement or as the first phase of a full website build.",
       },
     ],
-    metaTitle: "Logo & Brand Design | VOX Digital Agency",
+    metaTitle: "Brand Identity Design Services & Logo Design | VOX Digital Agency",
     metaDescription:
-      "Logos and complete brand identities — marks, color, typography and guidelines engineered to scale across web, print and packaging.",
+      "Complete brand identity design services, distinctive logo design, typography, and scalable brand guidelines for ambitious modern companies.",
   },
 ];
 

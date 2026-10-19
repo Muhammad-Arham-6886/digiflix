@@ -135,6 +135,17 @@ export function Header() {
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
+            <Link
+              href="/free-website-giveaway"
+              className="inline-flex items-center gap-1.5 rounded-full border border-accent-400/35 bg-accent-500/10 px-3.5 py-1.5 text-xs font-semibold text-accent-300 transition-all hover:border-accent-400/60 hover:bg-accent-500/20 hover:shadow-glow-accent/30"
+            >
+              <Icon name="Gift" className="h-3.5 w-3.5 text-accent-400" />
+              <span>Free Giveaway</span>
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-400 opacity-75"></span>
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent-400"></span>
+              </span>
+            </Link>
             <ButtonLink href="/book-consultation" variant="outline" size="sm">
               Book Call
             </ButtonLink>

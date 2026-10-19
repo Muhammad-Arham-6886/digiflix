@@ -11,8 +11,18 @@ import { buildMetadata, organizationJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Services & Capabilities — Worldwide Full-Service Digital Agency",
   description:
-    "World-class web development, e-commerce, AI automation, technical SEO, and UI/UX branding delivered worldwide from one senior agency team.",
+    "World-class web development, best website design, enterprise SEO, on-page SEO services, and brand identity design delivered worldwide from one senior agency team.",
   path: "/services",
+  keywords: [
+    "search engine optimization service",
+    "best search engine optimization agency",
+    "on-page seo services",
+    "best website design company",
+    "web design and digital marketing",
+    "enterprise seo company",
+    "white label digital marketing services",
+    "brand identity design services",
+  ],
 });
 
 export default function ServicesPage() {

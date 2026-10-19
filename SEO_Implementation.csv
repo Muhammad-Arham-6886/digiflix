@@ -35,7 +35,7 @@ Meta Description,Terms (app/terms/page.tsx),Description,Description about terms
 Meta Description,Coming Soon (app/coming-soon/page.tsx),Description,Description about new release
 Meta Description,Blog Post (app/blog/[slug]/page.tsx),Description,Dynamic {post.meta.description}
 Meta Description,Service Detail (app/services/[slug]/page.tsx),Description,Dynamic {service.metaDescription}
-Meta Keywords,Home (app/page.tsx),Keywords,"IT solutions agency, digital engineering, web development agency, software development, AI automation, cloud infrastructure, e-commerce, technical SEO, Shopify development, web performance"
+Meta Keywords,Home (app/page.tsx),Keywords,"best search engine optimization agency, best website design company, top rated website design, on-page seo services, enterprise seo agency, search engine optimization service, web development agency, wordpress seo agency, b2b seo consultant, technical seo audit, white label digital marketing services"
 Meta Keywords,Blog Post (app/blog/[slug]/page.tsx),Keywords,Dynamic {post.meta.tags}
 Meta Keywords,Service Detail (app/services/[slug]/page.tsx),Keywords,Dynamic {service.tags}
 Open Graph,All Pages,og:title,VOX Digital Agency — IT Solutions & Digital Engineering

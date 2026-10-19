@@ -89,7 +89,27 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
               ))}
             </nav>
 
-            <div className="mt-auto flex flex-col gap-3 pt-8">
+            <div className="mt-auto flex flex-col gap-3 pt-6">
+              <Link
+                href="/free-website-giveaway"
+                onClick={onClose}
+                className="flex items-center justify-between rounded-2xl border border-accent-400/40 bg-gradient-to-r from-accent-500/15 to-primary-500/15 p-3.5 transition-all hover:border-accent-400/70"
+              >
+                <div className="flex items-center gap-2.5">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-accent-500/20 text-accent-300">
+                    <Icon name="Gift" className="h-4 w-4" />
+                  </span>
+                  <div>
+                    <span className="block text-xs font-bold text-accent-300 uppercase tracking-wider">
+                      Exclusive Giveaway
+                    </span>
+                    <span className="block text-sm font-semibold text-ink">
+                      Free Website Giveaway
+                    </span>
+                  </div>
+                </div>
+                <Icon name="ArrowRight" className="h-4 w-4 text-accent-300" />
+              </Link>
               <ButtonLink href="/book-consultation" variant="outline" className="w-full">
                 Book Call
               </ButtonLink>

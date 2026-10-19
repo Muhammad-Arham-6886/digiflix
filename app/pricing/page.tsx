@@ -9,10 +9,18 @@ import { pricingTiers, servicePrices, carePlans, pricingFaq } from "@/lib/pricin
 import { buildMetadata, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 export const metadata: Metadata = buildMetadata({
-  title: "Pricing & Plans",
+  title: "Pricing & Plans — Transparent Web & SEO Packages",
   description:
-    "Transparent pricing for websites, e-commerce, AI automation and more — fixed-price project plans, per-service starting prices and EasyNest care plans.",
+    "Transparent pricing for websites, e-commerce, and SEO packages for small business and enterprise. Fixed-price project plans, SEO audit cost transparency, and care plans.",
   path: "/pricing",
+  keywords: [
+    "seo packages for small business",
+    "small business seo package",
+    "seo audit cost",
+    "enterprise seo consulting",
+    "web design and digital marketing",
+    "website redesign pricing",
+  ],
 });
 
 const toneDot = {

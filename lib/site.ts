@@ -75,6 +75,7 @@ export const footerNav = {
     { label: "Process", href: "/process" },
     { label: "Blog", href: "/blog" },
     { label: "Testimonials", href: "/testimonials" },
+    { label: "Free Website Giveaway", href: "/free-website-giveaway" },
     { label: "Contact", href: "/contact" },
   ],
   legal: [

@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/testimonials",
     "/contact",
     "/book-consultation",
+    "/free-website-giveaway",
     "/privacy",
     "/terms",
     "/cookies",
